@@ -94,20 +94,22 @@ void setIn(GPIO_TypeDef* GPIOx) { //set gpio input mode
 
 void sensorInit() {
 	setOut(PA); //set output mode
-	HAL_GPIO_WritePin(PA, GPIO_PIN_0, 0);
-	delay(1500);
 	HAL_GPIO_WritePin(PA, GPIO_PIN_0, 1);
-	delay(30);
+	HAL_Delay(2000);
+	HAL_GPIO_WritePin(PA, GPIO_PIN_0, 0);
+	delay(5000); //5ms
+	HAL_GPIO_WritePin(PA, GPIO_PIN_0, 1);
+	delay(20);
 	setIn(PA); //set input to read the sensor response in next function
 }
 
 uint8_t sensorVerify() {
-	setIn(PA);
+	//setIn(PA);
 	uint8_t r = 0;
 	delay(40);
-	if(!(HAL_GPIO_ReadPin(PA, GPIO_PIN_0))) {
+	if(HAL_GPIO_ReadPin(PA, GPIO_PIN_0) == GPIO_PIN_RESET) {  //if the pin is low
 		delay(80);
-		if((HAL_GPIO_ReadPin(PA, GPIO_PIN_0))) {
+		if((HAL_GPIO_ReadPin(PA, GPIO_PIN_0))) { //if the pin is high
 			r = 1;
 		} else {
 			r = -1;
@@ -214,15 +216,22 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+  /** Configure LSE Drive Capability
+  */
+  HAL_PWR_EnableBkUpAccess();
+  __HAL_RCC_LSEDRIVE_CONFIG(RCC_LSEDRIVE_LOW);
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
-  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_LSE|RCC_OSCILLATORTYPE_MSI;
+  RCC_OscInitStruct.LSEState = RCC_LSE_ON;
+  RCC_OscInitStruct.MSIState = RCC_MSI_ON;
+  RCC_OscInitStruct.MSICalibrationValue = 0;
+  RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_6;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-  RCC_OscInitStruct.PLL.PLLM = 3;
-  RCC_OscInitStruct.PLL.PLLN = 10;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_MSI;
+  RCC_OscInitStruct.PLL.PLLM = 1;
+  RCC_OscInitStruct.PLL.PLLN = 40;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
   RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
@@ -243,6 +252,9 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+  /** Enable MSI Auto calibration
+  */
+  HAL_RCCEx_EnableMSIPLLMode();
 }
 
 /**
@@ -262,7 +274,7 @@ static void MX_LPUART1_UART_Init(void)
   /* USER CODE END LPUART1_Init 1 */
   hlpuart1.Instance = LPUART1;
   hlpuart1.Init.BaudRate = 209700;
-  hlpuart1.Init.WordLength = UART_WORDLENGTH_7B;
+  hlpuart1.Init.WordLength = UART_WORDLENGTH_8B;
   hlpuart1.Init.StopBits = UART_STOPBITS_1;
   hlpuart1.Init.Parity = UART_PARITY_NONE;
   hlpuart1.Init.Mode = UART_MODE_TX_RX;
@@ -298,7 +310,7 @@ static void MX_TIM1_Init(void)
 
   /* USER CODE END TIM1_Init 1 */
   htim1.Instance = TIM1;
-  htim1.Init.Prescaler = 72-1;
+  htim1.Init.Prescaler = 79;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim1.Init.Period = 0xffff-1;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -424,4 +436,3 @@ void assert_failed(uint8_t *file, uint32_t line)
 #endif /* USE_FULL_ASSERT */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
-
