@@ -1,5 +1,5 @@
 /* USER CODE BEGIN Header */
-/*
+/**
   ******************************************************************************
   * @file           : main.c
   * @brief          : Main program body
@@ -15,10 +15,7 @@
   *                             www.st.com/SLA0044
   *
   ******************************************************************************
-*/
-  
-/* GEM Team - GPS Sensor - UCSB CE Capstone 2021 */
-  
+  */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -79,10 +76,11 @@ void nmeaParser(uint8_t *buf, uint16_t size);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-  uint8_t buf[8] = "";
-  uint8_t message0[32] = "  Full NMEA String -> ";
-  uint8_t message1[32] = "  Longitude: -> ";
-  uint8_t message2[32] = "  Latitude -> ";
+  uint8_t buf[71] = "";
+  uint8_t message0[32] = "\n\r Full NMEA String: ";
+  uint8_t message1[32] = "\n\r Longitude: ";
+  uint8_t message2[32] = "\n\r Latitude: ";
+  uint8_t command[45] = "PMTK314,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"; //For GGA and RMC information only
   Longitude = 0.0f;
   Latitude = 0.0f;
 
@@ -111,7 +109,8 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
   //strcpy(buf, "Hello World!\r\n");
-  HAL_GPIO_TogglePin(GPIOB, LD2_Pin);
+  //HAL_GPIO_TogglePin(GPIOB, LD2_Pin);
+  HAL_UART_Transmit(&huart2, command, 45, 4000);
 
   /* USER CODE END 2 */
 
@@ -123,12 +122,12 @@ int main(void)
     MX_USB_HOST_Process();
 
     /* USER CODE BEGIN 3 */
-    HAL_UART_Receive(&huart2, buf, 48, 4000);
+    strcpy((char*)buf, "");
+    HAL_UART_Receive(&huart2, buf, 71, 4000);
     HAL_Delay(1000);
-
     HAL_UART_Transmit(&hlpuart1, message0, 32, 1000);
     HAL_Delay(1000);
-    HAL_UART_Transmit(&hlpuart1, buf, 48, 4000);
+    HAL_UART_Transmit(&hlpuart1, buf, 71, 4000);
     HAL_Delay(1000);
 
     //finding Longitude
@@ -147,11 +146,11 @@ int main(void)
 
     HAL_UART_Transmit(&hlpuart1, message1, 32, 1000);
     HAL_Delay(1000);
-    HAL_UART_Transmit(&hlpuart1, LongT, 12, 4000);
+    HAL_UART_Transmit(&hlpuart1, LongT, 11, 1000);
     HAL_Delay(1000);
     HAL_UART_Transmit(&hlpuart1, message2, 32, 1000);
     HAL_Delay(1000);
-    HAL_UART_Transmit(&hlpuart1, LatT, 12, 4000);
+    HAL_UART_Transmit(&hlpuart1, LatT, 12, 1000);
     HAL_Delay(1000);
 
   }
