@@ -135,43 +135,33 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-    /* SOIL MOISTURE CODE */
-    int raw = readSoil();
-
-    HAL_UART_Transmit(&hlpuart1, soilMessage, 32, 1000);
-    HAL_Delay(1000);
-
-    sprintf(msg, "%hu\r\n", raw);
-    HAL_UART_Transmit(&hlpuart1, msg, 8, 1000);
-    HAL_Delay(1000);
-    /* SOIL MOISTURE CODE END*/
-
     /* GPS CODE */
-    /*
     strcpy((char*)buf, "");
-    HAL_UART_Receive(&huart2, buf, 71, 4000);
-    HAL_Delay(1000);
-    HAL_UART_Transmit(&hlpuart1, message0, 32, 1000);
-    HAL_Delay(1000);
-    HAL_UART_Transmit(&hlpuart1, buf, 71, 4000);
-    HAL_Delay(1000);
+    HAL_UART_Receive(&huart2, buf, 71, 2000);
+    HAL_UART_Transmit(&hlpuart1, message0, 32, 2000);
+    HAL_UART_Transmit(&hlpuart1, buf, 71, 2000);
     //finding Longitude
     char* LongT = (char*) buf;
     LongT = LongT + 18;
     char* LatT = (char*) buf;
     LatT = LatT + 30;
     HAL_UART_Transmit(&hlpuart1, message1, 32, 1000);
-    HAL_Delay(1000);
     HAL_UART_Transmit(&hlpuart1, LongT, 11, 1000);
-    HAL_Delay(1000);
     HAL_UART_Transmit(&hlpuart1, message2, 32, 1000);
-    HAL_Delay(1000);
     HAL_UART_Transmit(&hlpuart1, LatT, 12, 1000);
-    HAL_Delay(1000);
-    */
     /* GPS END */
 
+    /* SOIL MOISTURE CODE */
+    int raw = readSoil();
+    HAL_UART_Transmit(&hlpuart1, soilMessage, 32, 500);
+    HAL_Delay(500);
+    sprintf(msg, "%hu\r\n", raw);
+    HAL_UART_Transmit(&hlpuart1, msg, 8, 500);
+    /* SOIL MOISTURE CODE END*/
 
+    /* BAROMETRIC SENSOR CODE */
+
+    /* BARO METRIC SENSOR CODE END */
 
   }
   /* USER CODE END 3 */
