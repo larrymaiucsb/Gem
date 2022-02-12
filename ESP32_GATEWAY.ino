@@ -18,8 +18,8 @@
 #define SS 16
 #define DIO0 26
 
-const char *ssid = "Take Care";
-const char *password = "realmadrid17";
+const char *ssid = "";
+const char *password = "";
 
 WebServer server(80);
 
