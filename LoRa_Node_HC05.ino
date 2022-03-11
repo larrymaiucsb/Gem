@@ -28,11 +28,11 @@ void setup() {
   SerialBT.begin(115200);
   SerialBT.begin("ESP32test", false); //Bluetooth device name, isMaster
   Serial.println("\n*** AVAILABLE FOR PAIRING ***\n");
- 
   //LORA NODE CODE FROM HERE DOWN
   //Serial.begin(115200);
   Serial.println("LoRaNow Simple Node");
   LoRaNow.setFrequencyUS(); // 904.1 MHz - Used in USA, Canada and South America
+  //LoRaNow.setFrequencyAU(); // 917.0 MHz - Used in Australia, Brazil and Chile
   //LoRaNow.setFrequency(frequency);
   //LoRaNow.setSpreadingFactor(sf);
   //LoRaNow.setPins(ss, dio0);
