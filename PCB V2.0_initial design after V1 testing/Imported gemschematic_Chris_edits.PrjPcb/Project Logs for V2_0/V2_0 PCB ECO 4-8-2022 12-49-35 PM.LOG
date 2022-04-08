@@ -1,0 +1,78 @@
+Added Component: Designator=U?(FP-LQFP64-5W-MFG)
+Add component (AddParameter): Name = "Case/Package"; Value = "LQFP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Core Architecture"; Value = "ARM"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "32MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Interface"; Value = "I2C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Supply Voltage"; Value = "3.6V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Memory Size"; Value = "192KB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Memory Type"; Value = "FLASH"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-40°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Supply Voltage"; Value = "1.65V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of I/Os"; Value = "51"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Pins"; Value = "64"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Oscillator Type"; Value = "Internal"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tray"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Peripherals"; Value = "Brown-out Detect/Reset"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RAM Size"; Value = "20KB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS Compliant"; Value = "Yes"; VariantName = "[No Variations]"
+Added Component: Designator=U?(FP-LQFP64-5W-MFG)
+Add component (AddParameter): Name = "Case/Package"; Value = "LQFP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Core Architecture"; Value = "ARM"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "32MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Interface"; Value = "I2C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Supply Voltage"; Value = "3.6V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Memory Size"; Value = "192KB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Memory Type"; Value = "FLASH"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-40°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Supply Voltage"; Value = "1.65V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of I/Os"; Value = "51"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Pins"; Value = "64"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Oscillator Type"; Value = "Internal"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tray"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Peripherals"; Value = "Brown-out Detect/Reset"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RAM Size"; Value = "20KB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS Compliant"; Value = "Yes"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=USERBUTTON Pin=U?-2
+Added Pin To Net: NetName=NRST Pin=U?-7
+Added Pin To Net: NetName=PC3SOIL Pin=U?-11
+Added Pin To Net: NetName=GND Pin=U?-12
+Added Pin To Net: NetName=VCC Pin=U?-13
+Added Pin To Net: NetName=PA0LDR Pin=U?-14
+Added Pin To Net: NetName=BTTX Pin=U?-15
+Added Pin To Net: NetName=GND Pin=U?-18
+Added Pin To Net: NetName=VCC Pin=U?-19
+Added Pin To Net: NetName=LED Pin=U?-21
+Added Pin To Net: NetName=GND Pin=U?-31
+Added Pin To Net: NetName=VCC Pin=U?-32
+Added Pin To Net: NetName=GPSRX Pin=U?-42
+Added Pin To Net: NetName=GPSTX Pin=U?-43
+Added Pin To Net: NetName=SWDIOSTLINK Pin=U?-46
+Added Pin To Net: NetName=GND Pin=U?-47
+Added Pin To Net: NetName=VCC Pin=U?-48
+Added Pin To Net: NetName=SWCLKSTLINK Pin=U?-49
+Added Pin To Net: NetName=BTRX Pin=U?-51
+Added Pin To Net: NetName=SWOSTLINK Pin=U?-55
+Added Pin To Net: NetName=SCLBARO Pin=U?-58
+Added Pin To Net: NetName=SDABARO Pin=U?-59
+Added Pin To Net: NetName=GND Pin=U?-60
+Added Pin To Net: NetName=GND Pin=U?-63
+Added Pin To Net: NetName=VCC Pin=U?-64
+Change Net Name : Old Net Name=BTRX New Net Name=BT_RX
+Change Net Name : Old Net Name=BTTX New Net Name=BT_TX
+Change Net Name : Old Net Name=PC3SOIL New Net Name=PC3_SOIL
+Change Net Name : Old Net Name=SCLBARO New Net Name=SCL_BARO
+Change Net Name : Old Net Name=SDABARO New Net Name=SDA_BARO
+Change Net Name : Old Net Name=SWCLKSTLINK New Net Name=SWCLK_STLINK
+Change Net Name : Old Net Name=SWDIOSTLINK New Net Name=SWDIO_STLINK
+Change Net Name : Old Net Name=SWOSTLINK New Net Name=SWO_STLINK
+Change Net Name : Old Net Name=USERBUTTON New Net Name=USER_BUTTON
+Added Pin To Net: NetName=PC1_DHT Pin=U?-9
+Added Net: Name=PC1_DHT
+Added Pin To Net: NetName=PC2_DS18B20 Pin=U?-10
+Added Net: Name=PC2_DS18B20
+Added Member To Class: ClassName=V2_0 Member=Component U? STM32L073RZT6
+Added Member To Class: ClassName=V2_0 Member=Component U? STM32L073RZT6
