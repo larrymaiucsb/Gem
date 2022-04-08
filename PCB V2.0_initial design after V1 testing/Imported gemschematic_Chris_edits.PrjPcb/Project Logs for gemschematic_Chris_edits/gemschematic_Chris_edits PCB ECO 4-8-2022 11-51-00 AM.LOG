@@ -1,0 +1,254 @@
+Removed Pin From Net: NetName=GND Pin=U7-18
+Removed Pin From Net: NetName=VCC Pin=U7-19
+Removed Pin From Net: NetName=GND Pin=U7-31
+Removed Pin From Net: NetName=VCC Pin=U7-32
+Removed Pin From Net: NetName=GND Pin=U7-47
+Removed Pin From Net: NetName=GND Pin=U7-63
+Removed Pin From Net: NetName=VCC Pin=U7-64
+Change Component DesignItemId : Designator=LORANT Old DesignItemId=1X01_NO_SILK New DesignItemId=CONN_01PTH_NO_SILK_YES_STOP
+Change Component DesignItemId : Designator=LDRJUMPER Old DesignItemId=1X02 New DesignItemId=PINHD-1X2
+Change Component DesignItemId : Designator=POWER Old DesignItemId=1X02 New DesignItemId=PINHD-1X2
+Change Component DesignItemId : Designator=DS18B20 Old DesignItemId=1X03 New DesignItemId=PINHD-1X3
+Change Component DesignItemId : Designator=BLUETOOTH Old DesignItemId=1X06 New DesignItemId=PINHD-1X6
+Change Component DesignItemId : Designator=STLINK Old DesignItemId=1X06 New DesignItemId=PINHD-1X6
+Change Component DesignItemId : Designator=GPS1JUMPER Old DesignItemId=1X06_ROUND_70 New DesignItemId=HEADER-1X670MIL
+Change Component DesignItemId : Designator=GPS2JUMPER Old DesignItemId=1X06_ROUND_70 New DesignItemId=HEADER-1X670MIL
+Change Component DesignItemId : Designator=LORA1JUMPER Old DesignItemId=1X08_NO_SILK New DesignItemId=CONN_08NO_SILK_FEMALE_PTH
+Change Component DesignItemId : Designator=LORA2JUMPER Old DesignItemId=1X10_NO_SILK New DesignItemId=CONN_10NO_SILK_PTH_FEMALE
+Change Component DesignItemId : Designator=LED1 Old DesignItemId=D-G080508G1-KS2_LEDC2012X85N New DesignItemId=D-G080508G1-KS2_D-G080508G1-KS2
+Change Component DesignItemId : Designator=LDRPU Old DesignItemId=M0805 New DesignItemId=R-US_M0805
+Change Component DesignItemId : Designator=LEDPU Old DesignItemId=M0805 New DesignItemId=R-US_M0805
+Change Component DesignItemId : Designator=TEMPHUMIDPU Old DesignItemId=M0805 New DesignItemId=R-US_M0805
+Change Component DesignItemId : Designator=TEMPU Old DesignItemId=M0805 New DesignItemId=R-US_M0805
+Change Component DesignItemId : Designator=U7 Old DesignItemId=QFP50P1200X1200X160-64N New DesignItemId=STM32L073RZT6
+Change Component DesignItemId : Designator=SOILJUMPER Old DesignItemId=SCREWTERMINAL-3.5MM-3_LOCK.007S New DesignItemId=M03SCREW_LOCK
+Change Component DesignItemId : Designator=RESETBUTTON Old DesignItemId=SKHMPXE010 New DesignItemId=SKHMP*E010
+Change Component DesignItemId : Designator=USERBUTTON Old DesignItemId=SKHMPXE010 New DesignItemId=SKHMP*E010
+Change Component Comment : Designator=LORANT Old Comment= New Comment=CONN_01PTH_NO_SILK_YES_STOP
+Change Component Comment : Designator=LORA1JUMPER Old Comment= New Comment=CONN_08NO_SILK_FEMALE_PTH
+Change Component Comment : Designator=LORA2JUMPER Old Comment= New Comment=CONN_10NO_SILK_PTH_FEMALE
+Change Component Comment : Designator=LED1 Old Comment= New Comment=D-G080508G1-KS2_D-G080508G1-KS2
+Change Component Comment : Designator=GPS1JUMPER Old Comment= New Comment=HEADER-1X670MIL
+Change Component Comment : Designator=GPS2JUMPER Old Comment= New Comment=HEADER-1X670MIL
+Change Component Comment : Designator=SOILJUMPER Old Comment= New Comment=M03SCREW_LOCK
+Change Component Comment : Designator=LDRJUMPER Old Comment= New Comment=PINHD-1X2
+Change Component Comment : Designator=POWER Old Comment= New Comment=PINHD-1X2
+Change Component Comment : Designator=DS18B20 Old Comment= New Comment=PINHD-1X3
+Change Component Comment : Designator=BLUETOOTH Old Comment= New Comment=PINHD-1X6
+Change Component Comment : Designator=STLINK Old Comment= New Comment=PINHD-1X6
+Change Component Comment : Designator=U7 Old Comment= New Comment=STM32L073RZT6
+Change Component Comment : Designator=RESETBUTTON Old Comment=SKHMPSE010 New Comment=SKHMP*E010
+Change Component Comment : Designator=USERBUTTON Old Comment=SKHMPSE010 New Comment=SKHMP*E010
+Change Component Description : Designator=RESETBUTTON Old Description= New Description=6.2 X 6.5mm TACT Switch (SMD)   Source: http://www3.alps.co.jp/WebObjects/catalog.woa/PDF/E/Switch/Tact/SKHM/SKHM.PDF
+Change Component Description : Designator=USERBUTTON Old Description= New Description=6.2 X 6.5mm TACT Switch (SMD)   Source: http://www3.alps.co.jp/WebObjects/catalog.woa/PDF/E/Switch/Tact/SKHM/SKHM.PDF
+Change Component Description : Designator=BARO Old Description= New Description=.100" (2.54mm) Center Header - 4 Pin
+Change Component Description : Designator=DHT22 Old Description= New Description=.100" (2.54mm) Center Header - 4 Pin
+Change Component Description : Designator=SOILJUMPER Old Description= New Description=Header 3Standard 3-pin 0.1" header. Use with straight break away headers (SKU : PRT-00116), right angle break away headers (PRT-00553), swiss pins (PRT-00743), machine pins (PRT-00117), and female headers (PRT-00115). Molex polarized connector foot print use with SKU : PRT-08232 with associated crimp pins and housings.
+Change Component Description : Designator=LED1 Old Description= New Description=Light Emitting Diodes (LED) Green 526~531nm 250~330mcd@5mA Top View 0805 RoHS   Source:  Datasheet
+Change Component Description : Designator=LORA1JUMPER Old Description= New Description=Multi connection point. Often used as Generic Header-pin footprint for 0.1 inch spaced/style header connections    On any of the 0.1 inch spaced packages, you can populate with these:  Break Away Headers - Straight (PRT-00116)   Break Away Male Headers - Right Angle (PRT-00553)   Female Headers (PRT-00115)   Break Away Headers - Machine Pin (PRT-00117)   Break Away Female Headers - Swiss Machine Pin (PRT-00743)   Arduino Stackable Header - 8 Pin (PRT-09279)        For SCREWTERMINALS and SPRING TERMINALS visit here:  Screw Terimnals on SparkFun.com (5mm/3.5mm/2.54mm spacing)       This device is also useful as a general connection point to wire up your design to another part of your project. Our various solder wires solder well into these plated through hole pads.  Hook-Up Wire - Assortment (Stranded, 22 AWG) (PRT-11375)   Hook-Up Wire - Assortment (Solid Core, 22 AWG) (PRT-11367)   View the entire wire category on our website here          Special notes:     Molex polarized connector foot print use with SKU : PRT-08231 with associated crimp pins and housings. 1MM SMD Version SKU: PRT-10208    NOTES ON THE VARIANTS LOCK and LOCK_LONGPADS... This footprint was designed to help hold the alignment of a through-hole component (i.e.  6-pin header) while soldering it into place. You may notice that each hole has been shifted either up or down by 0.005 of an inch from it's more standard position (which is a perfectly straight line).  This slight alteration caused the pins (the squares in the middle) to touch the edges of the holes.  Because they are alternating, it causes a "brace" to hold the component in place.  0.005 has proven to be the perfect amount of "off-center" position when using our standard breakaway headers. Although looks a little odd when you look at the bare footprint, once you have a header in there, the alteration is very hard to notice.  Also,if you push a header all the way into place, it is covered up entirely on the bottom side.
+Change Component Description : Designator=LORA2JUMPER Old Description= New Description=Multi connection point. Often used as Generic Header-pin footprint for 0.1 inch spaced/style header connections    On any of the 0.1 inch spaced packages, you can populate with these:  Break Away Headers - Straight (PRT-00116)   Break Away Male Headers - Right Angle (PRT-00553)   Female Headers (PRT-00115)   Break Away Headers - Machine Pin (PRT-00117)   Break Away Female Headers - Swiss Machine Pin (PRT-00743)   Arduino Stackable Header - 10 Pin (PRT-11376)        For SCREWTERMINALS and SPRING TERMINALS visit here:  Screw Terimnals on SparkFun.com (5mm/3.5mm/2.54mm spacing)       This device is also useful as a general connection point to wire up your design to another part of your project. Our various solder wires solder well into these plated through hole pads.  Hook-Up Wire - Assortment (Stranded, 22 AWG) (PRT-11375)   Hook-Up Wire - Assortment (Solid Core, 22 AWG) (PRT-11367)   View the entire wire category on our website here          Special notes:     Molex polarized connector foot print use with SKU : PRT-08231 with associated crimp pins and housings. 1MM SMD Version SKU: PRT-10208    NOTES ON THE VARIANTS LOCK and LOCK_LONGPADS... This footprint was designed to help hold the alignment of a through-hole component (i.e.  6-pin header) while soldering it into place. You may notice that each hole has been shifted either up or down by 0.005 of an inch from it's more standard position (which is a perfectly straight line).  This slight alteration caused the pins (the squares in the middle) to touch the edges of the holes.  Because they are alternating, it causes a "brace" to hold the component in place.  0.005 has proven to be the perfect amount of "off-center" position when using our standard breakaway headers. Although looks a little odd when you look at the bare footprint, once you have a header in there, the alteration is very hard to notice.  Also,if you push a header all the way into place, it is covered up entirely on the bottom side.
+Change Component Description : Designator=U7 Old Description= New Description=None Check availability
+Change Component Description : Designator=BLUETOOTH Old Description= New Description=PIN HEADER
+Change Component Description : Designator=DS18B20 Old Description= New Description=PIN HEADER
+Change Component Description : Designator=GPS1JUMPER Old Description= New Description=PIN HEADER
+Change Component Description : Designator=GPS2JUMPER Old Description= New Description=PIN HEADER
+Change Component Description : Designator=LDRJUMPER Old Description= New Description=PIN HEADER
+Change Component Description : Designator=POWER Old Description= New Description=PIN HEADER
+Change Component Description : Designator=STLINK Old Description= New Description=PIN HEADER
+Change Component Description : Designator=LDRPU Old Description= New Description=RESISTOR, American symbol
+Change Component Description : Designator=LEDPU Old Description= New Description=RESISTOR, American symbol
+Change Component Description : Designator=TEMPHUMIDPU Old Description= New Description=RESISTOR, American symbol
+Change Component Description : Designator=TEMPU Old Description= New Description=RESISTOR, American symbol
+Change Component Description : Designator=LORANT Old Description= New Description=Single connection point. Often used as Generic Header-pin footprint for 0.1 inch spaced/style header connections       On any of the 0.1 inch spaced packages, you can populate with these:   Break Away Headers - Straight (PRT-00116)   Break Away Male Headers - Right Angle (PRT-00553)   Female Headers (PRT-00115)   Break Away Headers - Machine Pin (PRT-00117)   Break Away Female Headers - Swiss Machine Pin (PRT-00743)          This device is also useful as a general connection point to wire up your design to another part of your project. Our various solder wires solder well into these plated through hole pads.   Hook-Up Wire - Assortment (Stranded, 22 AWG) (PRT-11375)   Hook-Up Wire - Assortment (Solid Core, 22 AWG) (PRT-11367)   View the entire wire category on our website here          Special notes:    SMTSO-256-ET is a "flush mount" nut for a 4-40 screw. We mostly use this on specialty testbeds; it is a nice way to connect hardware to your PCB at an adjustable hieght.    Also note, the SNAP packages are for using a snappable style connector. We sell a baggie of snaps and they are also used on two LilyPad designs:   Snap Assortment - 30 pack (male and female) (DEV-11347)  LilyPad Arduino SimpleSnap (DEV-10941)   LilyPad SimpleSnap Protoboard (DEV-10940)
+Change Component Library : Designator=BLUETOOTH Old Library= New Library=adafruit.IntLib
+Change Component Library : Designator=DS18B20 Old Library= New Library=adafruit.IntLib
+Change Component Library : Designator=LDRPU Old Library= New Library=adafruit.IntLib
+Change Component Library : Designator=LEDPU Old Library= New Library=adafruit.IntLib
+Change Component Library : Designator=STLINK Old Library= New Library=adafruit.IntLib
+Change Component Library : Designator=TEMPHUMIDPU Old Library= New Library=adafruit.IntLib
+Change Component Library : Designator=TEMPU Old Library= New Library=adafruit.IntLib
+Change Component Library : Designator=LED1 Old Library= New Library=ce-capstone-2022.IntLib
+Change Component Library : Designator=BARO Old Library= New Library=con-molex.IntLib
+Change Component Library : Designator=DHT22 Old Library= New Library=con-molex.IntLib
+Change Component Library : Designator=GPS1JUMPER Old Library= New Library=microbuilder.IntLib
+Change Component Library : Designator=GPS2JUMPER Old Library= New Library=microbuilder.IntLib
+Change Component Library : Designator=LDRJUMPER Old Library= New Library=pinhead.IntLib
+Change Component Library : Designator=POWER Old Library= New Library=pinhead.IntLib
+Change Component Library : Designator=LORA1JUMPER Old Library= New Library=SparkFun-Connectors.IntLib
+Change Component Library : Designator=LORA2JUMPER Old Library= New Library=SparkFun-Connectors.IntLib
+Change Component Library : Designator=LORANT Old Library= New Library=SparkFun-Connectors.IntLib
+Change Component Library : Designator=SOILJUMPER Old Library= New Library=SparkFun-Connectors.IntLib
+Change Component Library : Designator=U7 Old Library= New Library=STM32L073RZT6.IntLib
+Change Component Library : Designator=RESETBUTTON Old Library= New Library=switch.IntLib
+Change Component Library : Designator=USERBUTTON Old Library= New Library=switch.IntLib
+Change component parameters: Designator = "BLUETOOTH" ("BLUETOOTH"); Footprint = "1X06"; UniqueID = "\DMNHDBTM" ("DMNHDBTM")
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "PINHD-1X6"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "adafruit"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "PINHD6"; VariantName = "[No Variations]"
+Change component parameters: Designator = "DS18B20" ("DS18B20"); Footprint = "1X03"; UniqueID = "\YIYXHCSX" ("YIYXHCSX")
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "PINHD-1X3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "adafruit"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "PINHD3"; VariantName = "[No Variations]"
+Change component parameters: Designator = "GPS1JUMPER" ("GPS1JUMPER"); Footprint = "1X06_ROUND_70"; UniqueID = "\XMMHTSSB" ("XMMHTSSB")
+Change component parameters (AddParameter): Name = "DeviceName"; Value = "70MIL"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "HEADER-1X6"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "microbuilder"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "PINHD6"; VariantName = "[No Variations]"
+Change component parameters: Designator = "GPS2JUMPER" ("GPS2JUMPER"); Footprint = "1X06_ROUND_70"; UniqueID = "\LGTAFFLC" ("LGTAFFLC")
+Change component parameters (AddParameter): Name = "DeviceName"; Value = "70MIL"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "HEADER-1X6"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "microbuilder"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "PINHD6"; VariantName = "[No Variations]"
+Change component parameters: Designator = "LDRPU" ("LDRPU"); Footprint = "M0805"; UniqueID = "\VBTVISYG" ("VBTVISYG")
+Change component parameters (AddParameter): Name = "DeviceName"; Value = "M0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "R-US_"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "adafruit"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "R-US"; VariantName = "[No Variations]"
+Change component parameters: Designator = "LEDPU" ("LEDPU"); Footprint = "M0805"; UniqueID = "\XIXHSCIQ" ("XIXHSCIQ")
+Change component parameters (AddParameter): Name = "DeviceName"; Value = "M0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "R-US_"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "adafruit"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "R-US"; VariantName = "[No Variations]"
+Change component parameters: Designator = "LORANT" ("LORANT"); Footprint = "1X01_NO_SILK"; UniqueID = "\XPTWBURV" ("XPTWBURV")
+Change component parameters (AddParameter): Name = "DeviceName"; Value = "PTH_NO_SILK_YES_STOP"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "CONN_01"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "SparkFun-Connectors"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "CONN_01"; VariantName = "[No Variations]"
+Change component parameters: Designator = "STLINK" ("STLINK"); Footprint = "1X06"; UniqueID = "\NUJJQMAK" ("NUJJQMAK")
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "PINHD-1X6"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "adafruit"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "PINHD6"; VariantName = "[No Variations]"
+Change component parameters: Designator = "TEMPHUMIDPU" ("TEMPHUMIDPU"); Footprint = "M0805"; UniqueID = "\FHKFCIVH" ("FHKFCIVH")
+Change component parameters (AddParameter): Name = "DeviceName"; Value = "M0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "R-US_"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "adafruit"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "R-US"; VariantName = "[No Variations]"
+Change component parameters: Designator = "TEMPU" ("TEMPU"); Footprint = "M0805"; UniqueID = "\JXUHGKPG" ("JXUHGKPG")
+Change component parameters (AddParameter): Name = "DeviceName"; Value = "M0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "R-US_"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "adafruit"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "R-US"; VariantName = "[No Variations]"
+Change component parameters: Designator = "LDRJUMPER" ("LDRJUMPER"); Footprint = "1X02"; UniqueID = "\LFBIEAOL" ("LFBIEAOL")
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "PINHD-1X2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "pinhead"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "POPULARITY"; Value = "98"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "PINHD2"; VariantName = "[No Variations]"
+Change component parameters: Designator = "POWER" ("POWER"); Footprint = "1X02"; UniqueID = "\DMMXKYNA" ("DMMXKYNA")
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "PINHD-1X2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "pinhead"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "POPULARITY"; Value = "98"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "PINHD2"; VariantName = "[No Variations]"
+Change component parameters: Designator = "RESETBUTTON" ("RESETBUTTON"); Footprint = "SKHMPXE010"; UniqueID = "\JXNHUCHA" ("JXNHUCHA")
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "SKHMP*E010"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "switch"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "POPULARITY"; Value = "5"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "NORMOPEN_SHIELD"; VariantName = "[No Variations]"
+Change component parameters: Designator = "USERBUTTON" ("USERBUTTON"); Footprint = "SKHMPXE010"; UniqueID = "\KPYOWJVB" ("KPYOWJVB")
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "SKHMP*E010"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "switch"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "POPULARITY"; Value = "5"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "NORMOPEN_SHIELD"; VariantName = "[No Variations]"
+Change component parameters: Designator = "LORA1JUMPER" ("LORA1JUMPER"); Footprint = "1X08_NO_SILK"; UniqueID = "\OIQKHRDR" ("OIQKHRDR")
+Change component parameters (AddParameter): Name = "DeviceName"; Value = "NO_SILK_FEMALE_PTH"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "CONN_08"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "SparkFun-Connectors"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PROD_ID"; Value = "CONN-08438"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "CONN_08"; VariantName = "[No Variations]"
+Change component parameters: Designator = "LORA2JUMPER" ("LORA2JUMPER"); Footprint = "1X10_NO_SILK"; UniqueID = "\UDKNJVHS" ("UDKNJVHS")
+Change component parameters (AddParameter): Name = "DeviceName"; Value = "NO_SILK_PTH_FEMALE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "CONN_10"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "SparkFun-Connectors"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PROD_ID"; Value = "CONN-11563"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "CONN_10"; VariantName = "[No Variations]"
+Change component parameters: Designator = "SOILJUMPER" ("SOILJUMPER"); Footprint = "SCREWTERMINAL-3.5MM-3_LOCK.007S"; UniqueID = "\JKBFGTPS" ("JKBFGTPS")
+Change component parameters (AddParameter): Name = "DeviceName"; Value = "SCREW_LOCK"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "M03"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "SparkFun-Connectors"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PROD_ID"; Value = "CONN-08288"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "M03"; VariantName = "[No Variations]"
+Change component parameters: Designator = "U7" ("U7"); Footprint = "QFP50P1200X1200X160-64N"; UniqueID = "\RXQMVBET" ("RXQMVBET")
+Change component parameters (AddParameter): Name = "AVAILABILITY"; Value = "In Stock"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "STM32L073RZT6"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "STM32L073RZT6"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "STMicroelectronics"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "STM32L073RZT6"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PACKAGE"; Value = "LQFP-64 STMicroelectronics"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PRICE"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PURCHASE-URL"; Value = "https://pricing.snapeda.com/search/part/STM32L073RZT6/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "STM32L073RZT6"; VariantName = "[No Variations]"
+Change component parameters: Designator = "LED1" ("LED1"); Footprint = "D-G080508G1-KS2_LEDC2012X85N"; UniqueID = "\YGREDVQM" ("YGREDVQM")
+Change component parameters (AddParameter): Name = "ARROW_PART_NUMBER"; Value = "ARROW_PART_NUMBER"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ARROW_PRICE-STOCK"; Value = "ARROW_PRICE-STOCK"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "D-G080508G1-KS2_D-G080508G1-KS2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "HEIGHT"; Value = "0.85mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "ce-capstone-2022"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MANUFACTURER_NAME"; Value = "Wuxi ARK Tech Elec"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MANUFACTURER_PART_NUMBER"; Value = "D-G080508G1-KS2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MOUSER_PART_NUMBER"; Value = "MOUSER_PART_NUMBER"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MOUSER_PRICE-STOCK"; Value = "MOUSER_PRICE-STOCK"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "D-G080508G1-KS2_D-G080508G1-KS2"; VariantName = "[No Variations]"
+Change component parameters: Designator = "BARO" ("BARO"); Footprint = "22-23-2041"; UniqueID = "\XAULGWLE" ("XAULGWLE")
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "22-23-2041"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "-1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_2"; Value = "-2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_3"; Value = "-3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_4"; Value = "-4"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "con-molex"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "MOLEX"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MPN"; Value = "22-23-2041"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "OC_FARNELL"; Value = "1462920"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "OC_NEWARK"; Value = "38C0355"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "POPULARITY"; Value = "21"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "MV"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_2"; Value = "M"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_3"; Value = "M"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_4"; Value = "M"; VariantName = "[No Variations]"
+Change component parameters: Designator = "DHT22" ("DHT22"); Footprint = "22-23-2041"; UniqueID = "\FDGIAYSR" ("FDGIAYSR")
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "22-23-2041"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "-1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_2"; Value = "-2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_3"; Value = "-3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_4"; Value = "-4"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "con-molex"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "MOLEX"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MPN"; Value = "22-23-2041"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "OC_FARNELL"; Value = "1462920"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "OC_NEWARK"; Value = "38C0355"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "POPULARITY"; Value = "21"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "MV"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_2"; Value = "M"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_3"; Value = "M"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_4"; Value = "M"; VariantName = "[No Variations]"
+Change Net Name : Old Net Name=N$1 New Net Name=NetLED1_2
+Added Class: Name=gemschematic_Chris_edits
+Added Room: Name=gemschematic_Chris_edits
