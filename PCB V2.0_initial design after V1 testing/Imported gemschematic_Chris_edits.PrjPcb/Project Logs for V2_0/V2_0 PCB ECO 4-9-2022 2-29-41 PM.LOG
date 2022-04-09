@@ -1,0 +1,10 @@
+Change Component Designator: OldDesignator=J1 NewDesignator=J_LDR
+Change Component Designator: OldDesignator=J2 NewDesignator=J_BT
+Change Component Designator: OldDesignator=J3 NewDesignator=J_GPS_1
+Change Component Designator: OldDesignator=J4 NewDesignator=J_GPS_2
+Change Component Designator: OldDesignator=J5 NewDesignator=J_DHT22
+Change Component Designator: OldDesignator=J6 NewDesignator=J_STLink
+Change Component Designator: OldDesignator=J7 NewDesignator=J_POWER
+Change Component Designator: OldDesignator=J8 NewDesignator=J_DS18B20
+Change Component Designator: OldDesignator=J9 NewDesignator=J_Soil
+Change Component Designator: OldDesignator=P1 NewDesignator=P_Baro

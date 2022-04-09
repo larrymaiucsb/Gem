@@ -1,0 +1,34 @@
+Change Component Designator: OldDesignator=D? NewDesignator=D1
+Change Component Designator: OldDesignator=J? NewDesignator=J1
+Change Component Designator: OldDesignator=J? NewDesignator=J2
+Change Component Designator: OldDesignator=J? NewDesignator=J3
+Change Component Designator: OldDesignator=J? NewDesignator=J4
+Change Component Designator: OldDesignator=J? NewDesignator=J5
+Change Component Designator: OldDesignator=J? NewDesignator=J6
+Change Component Designator: OldDesignator=J? NewDesignator=J7
+Change Component Designator: OldDesignator=J? NewDesignator=J8
+Change Component Designator: OldDesignator=J? NewDesignator=J9
+Change Component Designator: OldDesignator=J? NewDesignator=J10
+Change Component Designator: OldDesignator=J? NewDesignator=J11
+Change Component Designator: OldDesignator=P? NewDesignator=P1
+Change Component Designator: OldDesignator=R? NewDesignator=R1
+Change Component Designator: OldDesignator=R? NewDesignator=R2
+Change Component Designator: OldDesignator=R? NewDesignator=R3
+Change Component Designator: OldDesignator=R? NewDesignator=R4
+Change Component Designator: OldDesignator=SW? NewDesignator=SW1
+Change Component Designator: OldDesignator=SW? NewDesignator=SW2
+Change Net Name : Old Net Name=NetD?_2 New Net Name=NetD1_2
+Added Member To Class: ClassName=V2_0 Member=Component J1 SSW-102-02-G-S-RA
+Added Member To Class: ClassName=V2_0 Member=Component J2 SSW-106-02-G-S-RA
+Added Member To Class: ClassName=V2_0 Member=Component J3 SSW-106-02-T-S
+Added Member To Class: ClassName=V2_0 Member=Component J4 SSW-106-02-T-S
+Added Member To Class: ClassName=V2_0 Member=Component J5 SMH-104-02-G-S
+Added Member To Class: ClassName=V2_0 Member=Component J6 SSW-106-02-G-S-RA
+Added Member To Class: ClassName=V2_0 Member=Component J7 SSW-102-02-G-S-RA
+Added Member To Class: ClassName=V2_0 Member=Component J8 AMC03SAAN
+Added Member To Class: ClassName=V2_0 Member=Component J9 691508110303
+Added Member To Class: ClassName=V2_0 Member=Component J11 BCS-110-F-S-TE
+Added Member To Class: ClassName=V2_0 Member=Component R1 ERJ6ENF2200V
+Added Member To Class: ClassName=V2_0 Member=Component R2 RP73PF2A499RBTDF
+Added Member To Class: ClassName=V2_0 Member=Component R4 ERA6AEB472V
+Added Member To Class: ClassName=V2_0 Member=Component SW1 FSM2JSMAA
