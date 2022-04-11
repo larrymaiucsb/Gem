@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=VCC Pin=J_DS18B20-1
+Removed Pin From Net: NetName=GND Pin=J_DS18B20-3
+Change Component Footprint: Designator=J_DS18B20 Old Footprint=FP-AMC03SAAN-MFG New Footprint=691508110303
+Change Component Comment : Designator=J_DS18B20 Old Comment=AMC03SAAN New Comment=691508110303
+Change Managed Component Library Link : Designator=J_DS18B20 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=BF2B0CE1-B165-4E7A-89E2-128184C0F940 New ItemGUID=E628D7A4-EF46-4BEC-8B71-082DBDFF7E5A Old RevisionGUID=64859736-4213-4F46-925C-4B809DA44E32 New RevisionGUID=5CC2DB9D-BC03-40CF-A7B1-1A2C40546E37
+Change component parameters: Designator = "J_DS18B20" ("J_DS18B20"); Footprint = "FP-AMC03SAAN-MFG"; UniqueID = "\COKTFSSM" ("\COKTFSSM")
+Change component parameters (AddParameter): Name = "Datasheet URL"; Value = "http://katalog.we-online.de/em/datasheet/6915081103xx.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer URL"; Value = "http://www.we-online.de"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Temperature"; Value = "-40to130degC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Reference"; Value = "691508110303"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packaging"; Value = "TapeandReelwithCap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "691508110303"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pin Number"; Value = "3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pitch"; Value = "3.50mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "WurthElektronik"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=J_DS18B20-1
+Added Pin To Net: NetName=VCC Pin=J_DS18B20-3
