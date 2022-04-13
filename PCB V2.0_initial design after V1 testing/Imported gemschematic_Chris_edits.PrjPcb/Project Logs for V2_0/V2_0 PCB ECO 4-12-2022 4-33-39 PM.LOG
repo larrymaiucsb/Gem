@@ -1,0 +1,16 @@
+Added Component: Designator=J_Baro_2(FP-S8111-46R-MFG)
+Add component (AddParameter): Name = "Color"; Value = "Silver"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Depth"; Value = "5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.081inch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Material"; Value = "Bronze"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Material Thickness"; Value = "0.008inch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Solder"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Orientation"; Value = "Straight"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "1500"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Wire/Cable Color"; Value = "Grey"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=V2_0 Member=Component J_Baro_2 S8111-46R
