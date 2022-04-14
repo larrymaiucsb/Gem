@@ -1,0 +1,78 @@
+19:42:54 **** Incremental Build of configuration Debug for project PCB_sensor testing ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:94:12: warning: variable 'moisture' set but not used [-Wunused-but-set-variable]
+   94 |  uint16_t  moisture = 0;
+      |            ^~~~~~~~
+../Core/Src/main.c:92:8: warning: unused variable 'voltage' [-Wunused-variable]
+   92 |  float voltage;
+      |        ^~~~~~~
+../Core/Src/main.c:91:11: warning: unused variable 'light' [-Wunused-variable]
+   91 |  uint16_t light = 0;
+      |           ^~~~~
+../Core/Src/main.c:89:8: warning: unused variable 'internalTemp' [-Wunused-variable]
+   89 |  float internalTemp = 0;
+      |        ^~~~~~~~~~~~
+../Core/Src/main.c:88:11: warning: unused variable 'DS18B20_T' [-Wunused-variable]
+   88 |  uint16_t DS18B20_T;
+      |           ^~~~~~~~~
+../Core/Src/main.c:87:25: warning: unused variable 'DS18B20_Temp2' [-Wunused-variable]
+   87 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |                         ^~~~~~~~~~~~~
+../Core/Src/main.c:87:10: warning: unused variable 'DS18B20_Temp1' [-Wunused-variable]
+   87 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |          ^~~~~~~~~~~~~
+../Core/Src/main.c:85:22: warning: unused variable 'sum' [-Wunused-variable]
+   85 |  uint16_t temp, hum, sum;
+      |                      ^~~
+../Core/Src/main.c:85:17: warning: unused variable 'hum' [-Wunused-variable]
+   85 |  uint16_t temp, hum, sum;
+      |                 ^~~
+../Core/Src/main.c:85:11: warning: unused variable 'temp' [-Wunused-variable]
+   85 |  uint16_t temp, hum, sum;
+      |           ^~~~
+../Core/Src/main.c:84:26: warning: unused variable 'p' [-Wunused-variable]
+   84 |  uint8_t t1, t2, h1, h2, p;
+      |                          ^
+../Core/Src/main.c:84:22: warning: unused variable 'h2' [-Wunused-variable]
+   84 |  uint8_t t1, t2, h1, h2, p;
+      |                      ^~
+../Core/Src/main.c:84:18: warning: unused variable 'h1' [-Wunused-variable]
+   84 |  uint8_t t1, t2, h1, h2, p;
+      |                  ^~
+../Core/Src/main.c:84:14: warning: unused variable 't2' [-Wunused-variable]
+   84 |  uint8_t t1, t2, h1, h2, p;
+      |              ^~
+../Core/Src/main.c:84:10: warning: unused variable 't1' [-Wunused-variable]
+   84 |  uint8_t t1, t2, h1, h2, p;
+      |          ^~
+../Core/Src/main.c:82:27: warning: unused variable 'BMP_Pressure' [-Wunused-variable]
+   82 |  float BMP_Temp, BMP_Alt, BMP_Pressure;
+      |                           ^~~~~~~~~~~~
+../Core/Src/main.c:82:18: warning: unused variable 'BMP_Alt' [-Wunused-variable]
+   82 |  float BMP_Temp, BMP_Alt, BMP_Pressure;
+      |                  ^~~~~~~
+../Core/Src/main.c:82:8: warning: unused variable 'BMP_Temp' [-Wunused-variable]
+   82 |  float BMP_Temp, BMP_Alt, BMP_Pressure;
+      |        ^~~~~~~~
+../Core/Src/main.c:81:8: warning: unused variable 'DHT_Hum' [-Wunused-variable]
+   81 |  float DHT_Hum = 0;
+      |        ^~~~~~~
+../Core/Src/main.c:80:8: warning: unused variable 'DHT_Temp' [-Wunused-variable]
+   80 |  float DHT_Temp = 0;
+      |        ^~~~~~~~
+arm-none-eabi-gcc -o "PCB_sensor testing.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\Code_STM32CubeIDE\PCB_sensor testing\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCB_sensor testing.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCB_sensor testing.elf
+ 
+arm-none-eabi-size   PCB_sensor\ testing.elf 
+arm-none-eabi-objdump -h -S  PCB_sensor\ testing.elf  > "PCB_sensor testing.list"
+   text	   data	    bss	    dec	    hex	filename
+  11864	     20	   1804	  13688	   3578	PCB_sensor testing.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCB_sensor testing.list
+ 
+
+19:42:55 Build Finished. 0 errors, 20 warnings. (took 694ms)
+

@@ -121,7 +121,9 @@ int main(void)
 	//  ITM_SendChar(ch);
 	  //return ch;
   //}
-  dataCalibration();
+  /////////////////////////////////////////////
+  //dataCalibration();
+  /////////////////////////////////////////////
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -132,7 +134,7 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-	  //-------------------------------------------------------------------------BMP180
+/*	  //-------------------------------------------------------------------------BMP180
 	  BMP_Temp = getTemp(); //Get Temperature
 	  BMP_Temp = ((BMP_Temp * 9) / 5) + 32; //Convert to F
 	  BMP_Pressure = getPressure(0); //Get Pressure
@@ -175,6 +177,7 @@ int main(void)
 		  internalTemp = ((internalTemp * 9) / 5) + 32; //Convert to F
 	  }
 
+	  //--------------------------------------------------------------------------LDR
 	  ADC_ChannelConfTypeDef sConfig = {0};
 	  sConfig.Channel = ADC_CHANNEL_0;
 	  sConfig.Rank = 1;
@@ -188,11 +191,17 @@ int main(void)
 	  voltage = 3.3 * light;
 	  voltage = voltage / 4095;
 
+	  */
 
-	 // ADC_ChannelConfTypeDef sConfig = {0};
-	  sConfig.Channel = ADC_CHANNEL_13;
+
+	  //---------------------------------------------------------------------------Soil moisture
+	  ADC_ChannelConfTypeDef sConfig = {0};
+	  //sConfig.Channel = ADC_CHANNEL_13;
+	  /////////////////////////////////////////////
+	  sConfig.Channel = ADC_CHANNEL_0;
+	  /////////////////////////////////////////////////
 	  sConfig.Rank = 1;
-	 // sConfig.SamplingTime = ADC_SAMPLETIME_84CYCLES;
+	  // sConfig.SamplingTime = ADC_SAMPLETIME_84CYCLES;
 	  if(HAL_ADC_ConfigChannel(&hadc, &sConfig) != HAL_OK) {
 		  Error_Handler();
 	  }
@@ -200,7 +209,7 @@ int main(void)
 	  HAL_ADC_PollForConversion(&hadc, HAL_MAX_DELAY);
 	  moisture = HAL_ADC_GetValue(&hadc);
 	  //gcvt(voltage, 6, voltBuffer);
-	 // HAL_Delay(1000);
+	  HAL_Delay(1000);
   }
   /* USER CODE END 3 */
 }
