@@ -1,0 +1,7 @@
+Added Pin To Net: NetName=GND Pin=J_BT-2
+Added Pin To Net: NetName=VCC Pin=J_BT-3
+Added Pin To Net: NetName=BT_RX Pin=J_BT-4
+Added Pin To Net: NetName=BT_TX Pin=J_BT-5
+Change Class Name : Old Net Name=V2_0 New Net Name=V2_1
+Change Room Name: Old Name=V2_0 New Name=V2_1
+Change Room Scope: Old Scope=InComponentClass('V2_0') New Scope=InComponentClass('V2_1')
