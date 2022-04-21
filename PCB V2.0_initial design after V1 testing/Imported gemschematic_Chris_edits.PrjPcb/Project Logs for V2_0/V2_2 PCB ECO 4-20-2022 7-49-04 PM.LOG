@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=VCC Pin=J_DHT22-1
+Removed Pin From Net: NetName=PC1_DHT Pin=J_DHT22-2
+Removed Pin From Net: NetName=GND Pin=J_DHT22-4
+Removed Member From Class: ClassName=V2_1 Member=J_DHT22
+Add Component: Footprint Not Found 61300411121
+Add Pin To Net: Unknown Pin: Pin P_DHT22-1
+Add Pin To Net: Unknown Pin: Pin P_DHT22-3
+Add Pin To Net: Unknown Pin: Pin P_DHT22-4
+Change Class Name : Old Net Name=V2_1 New Net Name=V2_2
+Add Class Member: Failed to add class member : Component P_DHT22 61300411121
+Change Room Name: Old Name=V2_1 New Name=V2_2
+Change Room Scope: Old Scope=InComponentClass('V2_1') New Scope=InComponentClass('V2_2')
