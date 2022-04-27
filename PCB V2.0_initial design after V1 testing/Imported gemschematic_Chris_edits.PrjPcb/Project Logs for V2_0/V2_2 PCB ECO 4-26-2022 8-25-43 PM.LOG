@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=VCC Pin=JP_BT_PWRSW-1
+Removed Pin From Net: NetName=5V Pin=JP_BT_PWRSW-3
+Removed Member From Class: ClassName=V2_2 Member=JP_BT_PWRSW
+Added Pin To Net: NetName=5V Pin=J_BT-3

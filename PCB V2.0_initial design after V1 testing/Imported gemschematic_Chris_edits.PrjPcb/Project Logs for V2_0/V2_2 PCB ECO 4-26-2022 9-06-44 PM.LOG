@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=GND Pin=J_BT-2
+Removed Pin From Net: NetName=5V Pin=J_BT-3
+Removed Pin From Net: NetName=BT_RX Pin=J_BT-4
+Removed Pin From Net: NetName=BT_TX Pin=J_BT-5
+Removed Pin From Net: NetName=PC3_SOIL Pin=J_Soil-1
+Removed Pin From Net: NetName=VCC Pin=J_Soil-3
+Added Pin To Net: NetName=5V Pin=J_BT-2
+Added Pin To Net: NetName=GND Pin=J_BT-3
+Added Pin To Net: NetName=BT_TX Pin=J_BT-4
+Added Pin To Net: NetName=BT_RX Pin=J_BT-5
+Added Pin To Net: NetName=VCC Pin=J_Soil-1
+Added Pin To Net: NetName=PC3_SOIL Pin=J_Soil-3
