@@ -1,6 +1,4 @@
-%%------------------------------------------------- Create the UDP object
 %------------------------- 2020b  
-%%u = udpport("datagram", "IPV4", "LocalHost", "10.183.93.17", "LocalPort", 61111);
 
 u = serialport("COM12", 115200);
 
@@ -48,10 +46,19 @@ while ~isequal(datestr(now,'mm/DD HH:MM'),stopTime)
         
     time(count) = datetime('now');
     %------------------------------------- 2020b - read received packet 
-    readValue =     (u, 1, "string");             %number of datagram = 1
+    readValue = read(u, 1, "string");             %number of datagram = 1
 
     %------------------------------------------------- extract strings
-    str_all = extractBefore(readValue.Data, "O");
+    
+    %SAMPLE single message frame (sending all readings at once)
+    %24.03T38.50RH400C0VO
+    %extract before O = whole message w/o garbage at the end
+    %extract before T = 24.03
+    %extract b/w T and R = 38.50
+    %...
+    
+    str_all = extractBefore(readValue.Data, "O");       %this cut off 
+    
     str_T = extractBefore(str_all, "T");
     str_RH = extractBetween(str_all, "T", "R");
     str_CO2eq = extractBetween(str_all, "H", "C");
@@ -82,5 +89,5 @@ while ~isequal(datestr(now,'mm/DD HH:MM'),stopTime)
 %         break
 %     end
 end
-%% Clean up the UDP object
+%% Clean up the object
 delete(u)
