@@ -1,0 +1,5 @@
+DS18B20.c:11:6:setOutDS	48	static
+DS18B20.c:19:6:setInDS	48	static
+DS18B20.c:27:9:dsInit	16	static
+DS18B20.c:43:6:dsWrite	24	static
+DS18B20.c:61:9:dsRead	16	static

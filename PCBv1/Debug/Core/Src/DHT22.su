@@ -1,0 +1,5 @@
+DHT22.c:10:6:setOut	48	static
+DHT22.c:18:6:setIn	48	static
+DHT22.c:28:6:sensorInit	8	static
+DHT22.c:39:9:sensorVerify	16	static
+DHT22.c:57:9:sensorRead	16	static
