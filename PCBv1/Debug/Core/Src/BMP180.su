@@ -1,0 +1,6 @@
+BMP180.c:33:6:dataCalibration	48	static
+BMP180.c:50:10:utemp	32	static
+BMP180.c:59:10:getTemp	16	static
+BMP180.c:68:10:upress	48	static
+BMP180.c:90:7:getPressure	24	static
+BMP180.c:117:7:getAlt	16	static
