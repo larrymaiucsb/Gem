@@ -28,9 +28,11 @@ void setIn(GPIO_TypeDef* GPIOx) { //set gpio input mode
 void sensorInit() {
 	setOut(PC); //set output mode
 	HAL_GPIO_WritePin(PC, GPIO_PIN_1, 1);
-	HAL_Delay(2000); //wait two seconds before doing anything. just keep the pin high
+	//HAL_Delay(200);
+	HAL_Delay(200); //wait two seconds before doing anything. just keep the pin high
 	HAL_GPIO_WritePin(PC, GPIO_PIN_1, 0);
-	delay(5000); //5ms. wait 5 miliseconds
+	HAL_Delay(5);
+	//delay(5000); //5ms. wait 5 miliseconds
 	HAL_GPIO_WritePin(PC, GPIO_PIN_1, 1);
 	delay(20); //wait 20 microseconds
 	setIn(PC); //set input to read the sensor response in next function

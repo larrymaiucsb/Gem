@@ -1,0 +1,102 @@
+18:17:30 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:181:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  181 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:183:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  183 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:263:7: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  263 |       gcvt(DHT_Temp, 6, DHT22_TempBuffer);
+      |       ^~~~
+../Core/Src/main.c:127:9: warning: unused variable 'newLineBuffer' [-Wunused-variable]
+  127 |    char newLineBuffer[50];
+      |         ^~~~~~~~~~~~~
+../Core/Src/main.c:125:9: warning: unused variable 'BMP180_TempBuffer' [-Wunused-variable]
+  125 |    char BMP180_TempBuffer[50];
+      |         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:124:9: warning: unused variable 'BMP180_AltBuffer' [-Wunused-variable]
+  124 |    char BMP180_AltBuffer[50];
+      |         ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:123:9: warning: unused variable 'BMP180_PressBuffer' [-Wunused-variable]
+  123 |    char BMP180_PressBuffer[50];
+      |         ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:119:9: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  119 |    char voltBuffer[50];
+      |         ^~~~~~~~~~
+../Core/Src/main.c:115:11: warning: unused variable 'skipp' [-Wunused-variable]
+  115 |   uint8_t skipp[] = "Y";
+      |           ^~~~~
+../Core/Src/main.c:100:22: warning: variable 'sum' set but not used [-Wunused-but-set-variable]
+  100 |  uint16_t temp, hum, sum;
+      |                      ^~~
+../Core/Src/main.c:96:11: warning: unused variable 'newLine' [-Wunused-variable]
+   96 |      char newLine[] = "\n\r";
+      |           ^~~~~~~
+../Core/Src/main.c:95:11: warning: unused variable 'BMP180_TempString' [-Wunused-variable]
+   95 |      char BMP180_TempString[] = "\n\rThe BMP Temperature is ";
+      |           ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:94:11: warning: unused variable 'BMP180_AltString' [-Wunused-variable]
+   94 |      char BMP180_AltString[] = "The Altitude is ";
+      |           ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:93:11: warning: unused variable 'BMP180_PressString' [-Wunused-variable]
+   93 |      char BMP180_PressString[] = "The Surface Pressure is ";
+      |           ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:92:11: warning: unused variable 'SEN1367_MoistString' [-Wunused-variable]
+   92 |      char SEN1367_MoistString[] = "\n\rThe Soil Moisture is ";
+      |           ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:91:11: warning: unused variable 'DS18B20_TempString' [-Wunused-variable]
+   91 |      char DS18B20_TempString[] = "The Internal Temperature is ";
+      |           ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:90:11: warning: unused variable 'PHOTO_String' [-Wunused-variable]
+   90 |      char PHOTO_String[] = "\n\rThe Photoresistor Voltage is "; //270 ohm resistor
+      |           ^~~~~~~~~~~~
+../Core/Src/main.c:89:7: warning: unused variable 'DHT22_HumString' [-Wunused-variable]
+   89 |  char DHT22_HumString[] = "The Humidity is ";
+      |       ^~~~~~~~~~~~~~~
+../Core/Src/main.c:88:7: warning: unused variable 'DHT22_TempString' [-Wunused-variable]
+   88 |  char DHT22_TempString[] = "The External Temperature is ";
+      |       ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:87:27: warning: variable 'BMP_Pressure' set but not used [-Wunused-but-set-variable]
+   87 |  float BMP_Temp, BMP_Alt, BMP_Pressure;
+      |                           ^~~~~~~~~~~~
+../Core/Src/main.c:87:18: warning: variable 'BMP_Alt' set but not used [-Wunused-but-set-variable]
+   87 |  float BMP_Temp, BMP_Alt, BMP_Pressure;
+      |                  ^~~~~~~
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50656	    124	   2180	  52960	   cee0	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+
+18:17:31 Build Finished. 0 errors, 21 warnings. (took 932ms)
+

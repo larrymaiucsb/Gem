@@ -1,52 +1,62 @@
 %------------------------- 2020b  
+%----------------------------------------------STARTUP 
+%check COM number
+%check baud rate
 
-u = serialport("COM12", 115200);
+u = serialport("COM3", 115200);
 
 %%---------------------------------------------- Set up the figure window
 %time = now;
 T = 0;
-RH = 0;
-CO2eq = 0;
-TVOC = 0;
+H = 0;
+DST = 0;
+%TVOC = 0;
 
 % %--------------------------------------------- Set up tile window for multiple figures
-t = tiledlayout(4,1);               % >2019b
+t = tiledlayout(3,1);               % >2019b
                                     % (rows, columns)
                                                                      
 ax1 = nexttile;                     %creates an axes object
                                     %places it into the next empty tile
                                     %in the current figure                                                                          
 title('Temperature')
-ylabel('C')
+ylabel('F')
 hold on                             %preserved after call of plot()
 
 ax2 = nexttile;
-title('RH')
+title('Humidity')
 ylabel('%')
 hold on
 
 ax3 = nexttile;
-title('CO2eq')
-ylabel('ppm')
+title('Soil Temperature')
+ylabel('F')
 hold on
-
-ax4 = nexttile;
-title('TVOC')
-ylabel('ppb')
-hold on
+% 
+% ax4 = nexttile;
+% title('TVOC')
+% ylabel('ppb')
+% hold on
 
 %%------------------------- Set time span and interval for data collection
 stopTime = '12/01 13:40';           %effectively non-stop
+
+
+
 %%----------------------------------------------------------- Collect data
 count = 1;
-
 loops = 0;
-
+%%-------------------------------------------disregard first few frames
+%  for i= 1:20
+%      readValue = readline(u);
+%      pause(0.5);
+%  end
 while ~isequal(datestr(now,'mm/DD HH:MM'),stopTime)
         
     time(count) = datetime('now');
     %------------------------------------- 2020b - read received packet 
-    readValue = read(u, 1, "string");             %number of datagram = 1
+    %readValue = read(u, 200, "string");             %number of datagram = 1
+    readValue = readline(u);
 
     %------------------------------------------------- extract strings
     
@@ -56,28 +66,48 @@ while ~isequal(datestr(now,'mm/DD HH:MM'),stopTime)
     %extract before T = 24.03
     %extract b/w T and R = 38.50
     %...
-    
-    str_all = extractBefore(readValue.Data, "O");       %this cut off 
-    
+   
+    str_all = extractBetween(readValue, "Message: @","#");
+
     str_T = extractBefore(str_all, "T");
-    str_RH = extractBetween(str_all, "T", "R");
-    str_CO2eq = extractBetween(str_all, "H", "C");
-    str_TVOC = extractBetween(str_all, "C", "V");
+    str_H = extractBetween(str_all, "T", "H");
+    str_DST = extractBetween(str_all, "H", "S");
+    %str_TVOC = extractBetween(str_all, "C", "V");
     
     %-------------------------------------------------- convert to numbers
-    T(count) = str2double(str_T);
-    RH(count) = str2double(str_RH);
-    CO2eq(count) = str2double(str_CO2eq);
-    TVOC(count) = str2double(str_TVOC);   
+    try
+        T(count) = str2double(str_T);
+        H(count) = str2double(str_H);
+        DST(count) = str2double(str_DST);
+        if (T(count)~=0)
+            try
+                plot(ax1, time,T, '--or');             %auto-target current figure
+                plot(ax2, time,H, '-k');
+                plot(ax3, time,DST, '--b');
+                count = count +1;
+            catch
+            end
+        end
+    catch
+    end
+
+    
+    %TVOC(count) = str2double(str_TVOC);   
     
     %---------------------------------------------------------update plots
-    plot(ax1, time,T, '-r');              %auto-target current figure
-    plot(ax2, time,RH, '-k');             %auto-target current figure
-    plot(ax3, time,CO2eq, '--b');          %auto-target current figure
-    plot(ax4, time,TVOC, '-m');           %auto-target current figure
+%     if (T(count)~=0)
+%         try
+%             plot(ax1, time,T, '--or');             %auto-target current figure
+%             plot(ax2, time,H, '-k');               
+%             plot(ax3, time,DST, '--b');          
+%             count = count +1;
+%         catch
+%         end
+%     end
+    %plot(ax4, time,TVOC, '-m');           %auto-target current figure
     
     pause(0.1);
-    count = count +1;
+    %count = count +1;
     
     %--------------------------------------------- Specify no. of readings
 %     loops = loops + 1;

@@ -28,15 +28,18 @@ uint8_t dsInit() {
 	uint8_t r = 0;
 	setOutDS(PC);
 	HAL_GPIO_WritePin(PC, GPIO_PIN_2, 0);
-	delay(480);
+	delay(50);
+	//delay(480);
 	setInDS(PC);
-	delay(80);
+	delay(50);
+	//delay(80);
 	if(!(HAL_GPIO_ReadPin(PC, GPIO_PIN_2))) {
 		r = 1;
 	} else {
 		r = -1;
 	}
-	delay(400);
+	delay(50);
+	//delay(400);
 	return r;
 }
 

@@ -1,0 +1,1289 @@
+13:50:54 **** Clean-only build of configuration Debug for project PCBv1 ****
+make -j8 clean 
+rm -rf  default.size.stdout  PCBv1.list  PCBv1.elf  ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.o ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.o ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.o ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.o ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.o ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_exti.o ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.o ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.o ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.o ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.o ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.o ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.o ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.o ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.o ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.o ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.o ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.o ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.o ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.o ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.o  ./Core/Startup/startup_stm32l072rbtx.o  ./Core/Src/BMP180.o ./Core/Src/DHT22.o ./Core/Src/DS18B20.o ./Core/Src/delay.o ./Core/Src/main.o ./Core/Src/stm32l0xx_hal_msp.o ./Core/Src/stm32l0xx_it.o ./Core/Src/syscalls.o ./Core/Src/sysmem.o ./Core/Src/system_stm32l0xx.o  ./Core/Startup/startup_stm32l072rbtx.d  ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.d ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.d ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.d ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.d ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.d ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_exti.d ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.d ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.d ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.d ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.d ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.d ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.d ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.d ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.d ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.d ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.d ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.d ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.d ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.d ./Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.d  ./Core/Src/BMP180.d ./Core/Src/DHT22.d ./Core/Src/DS18B20.d ./Core/Src/delay.d ./Core/Src/main.d ./Core/Src/stm32l0xx_hal_msp.d ./Core/Src/stm32l0xx_it.d ./Core/Src/syscalls.d ./Core/Src/sysmem.d ./Core/Src/system_stm32l0xx.d  PCBv1.bin  PCBv1.elf
+ 
+13:50:55 **** Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_exti.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_exti.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.o"
+arm-none-eabi-gcc -mcpu=cortex-m0plus -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32l072rbtx.d" -MT"Core/Startup/startup_stm32l072rbtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Startup/startup_stm32l072rbtx.o" "../Core/Startup/startup_stm32l072rbtx.s"
+arm-none-eabi-gcc "../Core/Src/BMP180.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/BMP180.d" -MT"Core/Src/BMP180.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/BMP180.o"
+arm-none-eabi-gcc "../Core/Src/DHT22.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/DHT22.d" -MT"Core/Src/DHT22.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/DHT22.o"
+arm-none-eabi-gcc "../Core/Src/DS18B20.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/DS18B20.d" -MT"Core/Src/DS18B20.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/DS18B20.o"
+arm-none-eabi-gcc "../Core/Src/delay.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/delay.d" -MT"Core/Src/delay.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/delay.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32l0xx_hal_msp.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32l0xx_hal_msp.d" -MT"Core/Src/stm32l0xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32l0xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32l0xx_it.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32l0xx_it.d" -MT"Core/Src/stm32l0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32l0xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sysmem.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:120:9: error: redeclaration of 'moistbuffer' with no linkage
+  120 |    char moistbuffer[50];
+      |         ^~~~~~~~~~~
+../Core/Src/main.c:97:11: note: previous declaration of 'moistbuffer' was here
+   97 |      char moistbuffer[50];
+      |           ^~~~~~~~~~~
+../Core/Src/main.c:180:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  180 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:182:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  182 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:256:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  256 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer); //Convert Float to String
+      |    ^~~~
+../Core/Src/main.c:297:56: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  297 |     HAL_UART_Transmit(&huart4, (uint8_t*)skipp, strlen(skipp), HAL_MAX_DELAY);
+      |                                                        ^~~~~
+      |                                                        |
+      |                                                        uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+c:\st\stm32cubeide_1.8.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c:303:56: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  303 |     HAL_UART_Transmit(&huart4, (uint8_t*)skipp, strlen(skipp), HAL_MAX_DELAY);
+      |                                                        ^~~~~
+      |                                                        |
+      |                                                        uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+c:\st\stm32cubeide_1.8.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c:310:56: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  310 |     HAL_UART_Transmit(&huart4, (uint8_t*)skipp, strlen(skipp), HAL_MAX_DELAY);
+      |                                                        ^~~~~
+      |                                                        |
+      |                                                        uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+c:\st\stm32cubeide_1.8.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c:338:32: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  338 |     HAL_UART_Transmit(&huart4, (uint8_t*)moisture, strlen(moistbuffer), HAL_MAX_DELAY);
+      |                                ^
+../Core/Src/main.c:339:56: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  339 |     HAL_UART_Transmit(&huart4, (uint8_t*)skipp, strlen(skipp), HAL_MAX_DELAY);
+      |                                                        ^~~~~
+      |                                                        |
+      |                                                        uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+c:\st\stm32cubeide_1.8.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c:126:9: warning: unused variable 'newLineBuffer' [-Wunused-variable]
+  126 |    char newLineBuffer[50];
+      |         ^~~~~~~~~~~~~
+../Core/Src/main.c:119:9: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  119 |    char voltBuffer[50];
+      |         ^~~~~~~~~~
+../Core/Src/main.c:100:22: warning: variable 'sum' set but not used [-Wunused-but-set-variable]
+  100 |  uint16_t temp, hum, sum;
+      |                      ^~~
+../Core/Src/main.c:95:11: warning: unused variable 'BMP180_TempString' [-Wunused-variable]
+   95 |      char BMP180_TempString[] = "\n\rThe BMP Temperature is ";
+      |           ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:94:11: warning: unused variable 'BMP180_AltString' [-Wunused-variable]
+   94 |      char BMP180_AltString[] = "The Altitude is ";
+      |           ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:93:11: warning: unused variable 'BMP180_PressString' [-Wunused-variable]
+   93 |      char BMP180_PressString[] = "The Surface Pressure is ";
+      |           ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:92:11: warning: unused variable 'SEN1367_MoistString' [-Wunused-variable]
+   92 |      char SEN1367_MoistString[] = "\n\rThe Soil Moisture is ";
+      |           ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:91:11: warning: unused variable 'DS18B20_TempString' [-Wunused-variable]
+   91 |      char DS18B20_TempString[] = "The Internal Temperature is ";
+      |           ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:90:11: warning: unused variable 'PHOTO_String' [-Wunused-variable]
+   90 |      char PHOTO_String[] = "\n\rThe Photoresistor Voltage is "; //270 ohm resistor
+      |           ^~~~~~~~~~~~
+../Core/Src/main.c:89:7: warning: unused variable 'DHT22_HumString' [-Wunused-variable]
+   89 |  char DHT22_HumString[] = "The Humidity is ";
+      |       ^~~~~~~~~~~~~~~
+../Core/Src/main.c:88:7: warning: unused variable 'DHT22_TempString' [-Wunused-variable]
+   88 |  char DHT22_TempString[] = "The External Temperature is ";
+      |       ^~~~~~~~~~~~~~~~
+arm-none-eabi-gcc "../Core/Src/system_stm32l0xx.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32l0xx.d" -MT"Core/Src/system_stm32l0xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32l0xx.o"
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:56:01 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:181:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  181 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:183:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  183 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:257:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  257 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer); //Convert Float to String
+      |    ^~~~
+../Core/Src/main.c:298:56: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  298 |     HAL_UART_Transmit(&huart4, (uint8_t*)skipp, strlen(skipp), HAL_MAX_DELAY);
+      |                                                        ^~~~~
+      |                                                        |
+      |                                                        uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+c:\st\stm32cubeide_1.8.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c:304:56: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  304 |     HAL_UART_Transmit(&huart4, (uint8_t*)skipp, strlen(skipp), HAL_MAX_DELAY);
+      |                                                        ^~~~~
+      |                                                        |
+      |                                                        uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+c:\st\stm32cubeide_1.8.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c:311:56: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  311 |     HAL_UART_Transmit(&huart4, (uint8_t*)skipp, strlen(skipp), HAL_MAX_DELAY);
+      |                                                        ^~~~~
+      |                                                        |
+      |                                                        uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+c:\st\stm32cubeide_1.8.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c:339:32: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  339 |     HAL_UART_Transmit(&huart4, (uint8_t*)moisture, strlen(moistbuffer), HAL_MAX_DELAY);
+      |                                ^
+../Core/Src/main.c:340:56: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  340 |     HAL_UART_Transmit(&huart4, (uint8_t*)skipp, strlen(skipp), HAL_MAX_DELAY);
+      |                                                        ^~~~~
+      |                                                        |
+      |                                                        uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+c:\st\stm32cubeide_1.8.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c:127:9: warning: unused variable 'newLineBuffer' [-Wunused-variable]
+  127 |    char newLineBuffer[50];
+      |         ^~~~~~~~~~~~~
+../Core/Src/main.c:119:9: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  119 |    char voltBuffer[50];
+      |         ^~~~~~~~~~
+../Core/Src/main.c:100:22: warning: variable 'sum' set but not used [-Wunused-but-set-variable]
+  100 |  uint16_t temp, hum, sum;
+      |                      ^~~
+../Core/Src/main.c:95:11: warning: unused variable 'BMP180_TempString' [-Wunused-variable]
+   95 |      char BMP180_TempString[] = "\n\rThe BMP Temperature is ";
+      |           ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:94:11: warning: unused variable 'BMP180_AltString' [-Wunused-variable]
+   94 |      char BMP180_AltString[] = "The Altitude is ";
+      |           ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:93:11: warning: unused variable 'BMP180_PressString' [-Wunused-variable]
+   93 |      char BMP180_PressString[] = "The Surface Pressure is ";
+      |           ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:92:11: warning: unused variable 'SEN1367_MoistString' [-Wunused-variable]
+   92 |      char SEN1367_MoistString[] = "\n\rThe Soil Moisture is ";
+      |           ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:91:11: warning: unused variable 'DS18B20_TempString' [-Wunused-variable]
+   91 |      char DS18B20_TempString[] = "The Internal Temperature is ";
+      |           ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:90:11: warning: unused variable 'PHOTO_String' [-Wunused-variable]
+   90 |      char PHOTO_String[] = "\n\rThe Photoresistor Voltage is "; //270 ohm resistor
+      |           ^~~~~~~~~~~~
+../Core/Src/main.c:89:7: warning: unused variable 'DHT22_HumString' [-Wunused-variable]
+   89 |  char DHT22_HumString[] = "The Humidity is ";
+      |       ^~~~~~~~~~~~~~~
+../Core/Src/main.c:88:7: warning: unused variable 'DHT22_TempString' [-Wunused-variable]
+   88 |  char DHT22_TempString[] = "The External Temperature is ";
+      |       ^~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50856	    124	   2180	  53160	   cfa8	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+13:56:07 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-size   PCBv1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50856	    124	   2180	  53160	   cfa8	PCBv1.elf
+Finished building: default.size.stdout
+ 
+13:58:29 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-size   PCBv1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50856	    124	   2180	  53160	   cfa8	PCBv1.elf
+Finished building: default.size.stdout
+ 
+13:58:55 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-size   PCBv1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50856	    124	   2180	  53160	   cfa8	PCBv1.elf
+Finished building: default.size.stdout
+ 
+14:03:45 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:181:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  181 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:183:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  183 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:257:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  257 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer); //Convert Float to String
+      |    ^~~~
+../Core/Src/main.c:300:56: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  300 |     HAL_UART_Transmit(&huart4, (uint8_t*)skipp, strlen(skipp), HAL_MAX_DELAY);
+      |                                                        ^~~~~
+      |                                                        |
+      |                                                        uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+c:\st\stm32cubeide_1.8.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c:306:56: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  306 |     HAL_UART_Transmit(&huart4, (uint8_t*)skipp, strlen(skipp), HAL_MAX_DELAY);
+      |                                                        ^~~~~
+      |                                                        |
+      |                                                        uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+c:\st\stm32cubeide_1.8.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c:313:56: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  313 |     HAL_UART_Transmit(&huart4, (uint8_t*)skipp, strlen(skipp), HAL_MAX_DELAY);
+      |                                                        ^~~~~
+      |                                                        |
+      |                                                        uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+c:\st\stm32cubeide_1.8.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c:341:32: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  341 |     HAL_UART_Transmit(&huart4, (uint8_t*)moisture, strlen(moistbuffer), HAL_MAX_DELAY);
+      |                                ^
+../Core/Src/main.c:342:56: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  342 |     HAL_UART_Transmit(&huart4, (uint8_t*)skipp, strlen(skipp), HAL_MAX_DELAY);
+      |                                                        ^~~~~
+      |                                                        |
+      |                                                        uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+c:\st\stm32cubeide_1.8.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c:127:9: warning: unused variable 'newLineBuffer' [-Wunused-variable]
+  127 |    char newLineBuffer[50];
+      |         ^~~~~~~~~~~~~
+../Core/Src/main.c:119:9: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  119 |    char voltBuffer[50];
+      |         ^~~~~~~~~~
+../Core/Src/main.c:100:22: warning: variable 'sum' set but not used [-Wunused-but-set-variable]
+  100 |  uint16_t temp, hum, sum;
+      |                      ^~~
+../Core/Src/main.c:95:11: warning: unused variable 'BMP180_TempString' [-Wunused-variable]
+   95 |      char BMP180_TempString[] = "\n\rThe BMP Temperature is ";
+      |           ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:94:11: warning: unused variable 'BMP180_AltString' [-Wunused-variable]
+   94 |      char BMP180_AltString[] = "The Altitude is ";
+      |           ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:93:11: warning: unused variable 'BMP180_PressString' [-Wunused-variable]
+   93 |      char BMP180_PressString[] = "The Surface Pressure is ";
+      |           ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:92:11: warning: unused variable 'SEN1367_MoistString' [-Wunused-variable]
+   92 |      char SEN1367_MoistString[] = "\n\rThe Soil Moisture is ";
+      |           ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:91:11: warning: unused variable 'DS18B20_TempString' [-Wunused-variable]
+   91 |      char DS18B20_TempString[] = "The Internal Temperature is ";
+      |           ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:90:11: warning: unused variable 'PHOTO_String' [-Wunused-variable]
+   90 |      char PHOTO_String[] = "\n\rThe Photoresistor Voltage is "; //270 ohm resistor
+      |           ^~~~~~~~~~~~
+../Core/Src/main.c:89:7: warning: unused variable 'DHT22_HumString' [-Wunused-variable]
+   89 |  char DHT22_HumString[] = "The Humidity is ";
+      |       ^~~~~~~~~~~~~~~
+../Core/Src/main.c:88:7: warning: unused variable 'DHT22_TempString' [-Wunused-variable]
+   88 |  char DHT22_TempString[] = "The External Temperature is ";
+      |       ^~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50880	    124	   2180	  53184	   cfc0	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+14:10:15 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:181:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  181 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:183:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  183 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:257:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  257 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer); //Convert Float to String
+      |    ^~~~
+../Core/Src/main.c:309:56: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  309 |     HAL_UART_Transmit(&huart4, (uint8_t*)skipp, strlen(skipp), HAL_MAX_DELAY);
+      |                                                        ^~~~~
+      |                                                        |
+      |                                                        uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+c:\st\stm32cubeide_1.8.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c:350:32: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  350 |     HAL_UART_Transmit(&huart4, (uint8_t*)moisture, strlen(moistbuffer), HAL_MAX_DELAY);
+      |                                ^
+../Core/Src/main.c:127:9: warning: unused variable 'newLineBuffer' [-Wunused-variable]
+  127 |    char newLineBuffer[50];
+      |         ^~~~~~~~~~~~~
+../Core/Src/main.c:119:9: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  119 |    char voltBuffer[50];
+      |         ^~~~~~~~~~
+../Core/Src/main.c:100:22: warning: variable 'sum' set but not used [-Wunused-but-set-variable]
+  100 |  uint16_t temp, hum, sum;
+      |                      ^~~
+../Core/Src/main.c:95:11: warning: unused variable 'BMP180_TempString' [-Wunused-variable]
+   95 |      char BMP180_TempString[] = "\n\rThe BMP Temperature is ";
+      |           ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:94:11: warning: unused variable 'BMP180_AltString' [-Wunused-variable]
+   94 |      char BMP180_AltString[] = "The Altitude is ";
+      |           ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:93:11: warning: unused variable 'BMP180_PressString' [-Wunused-variable]
+   93 |      char BMP180_PressString[] = "The Surface Pressure is ";
+      |           ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:92:11: warning: unused variable 'SEN1367_MoistString' [-Wunused-variable]
+   92 |      char SEN1367_MoistString[] = "\n\rThe Soil Moisture is ";
+      |           ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:91:11: warning: unused variable 'DS18B20_TempString' [-Wunused-variable]
+   91 |      char DS18B20_TempString[] = "The Internal Temperature is ";
+      |           ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:90:11: warning: unused variable 'PHOTO_String' [-Wunused-variable]
+   90 |      char PHOTO_String[] = "\n\rThe Photoresistor Voltage is "; //270 ohm resistor
+      |           ^~~~~~~~~~~~
+../Core/Src/main.c:89:7: warning: unused variable 'DHT22_HumString' [-Wunused-variable]
+   89 |  char DHT22_HumString[] = "The Humidity is ";
+      |       ^~~~~~~~~~~~~~~
+../Core/Src/main.c:88:7: warning: unused variable 'DHT22_TempString' [-Wunused-variable]
+   88 |  char DHT22_TempString[] = "The External Temperature is ";
+      |       ^~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50844	    124	   2180	  53148	   cf9c	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+14:13:41 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:181:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  181 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:183:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  183 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:257:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  257 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer); //Convert Float to String
+      |    ^~~~
+../Core/Src/main.c:309:56: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  309 |     HAL_UART_Transmit(&huart4, (uint8_t*)skipp, strlen(skipp), HAL_MAX_DELAY);
+      |                                                        ^~~~~
+      |                                                        |
+      |                                                        uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+c:\st\stm32cubeide_1.8.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c:127:9: warning: unused variable 'newLineBuffer' [-Wunused-variable]
+  127 |    char newLineBuffer[50];
+      |         ^~~~~~~~~~~~~
+../Core/Src/main.c:119:9: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  119 |    char voltBuffer[50];
+      |         ^~~~~~~~~~
+../Core/Src/main.c:100:22: warning: variable 'sum' set but not used [-Wunused-but-set-variable]
+  100 |  uint16_t temp, hum, sum;
+      |                      ^~~
+../Core/Src/main.c:95:11: warning: unused variable 'BMP180_TempString' [-Wunused-variable]
+   95 |      char BMP180_TempString[] = "\n\rThe BMP Temperature is ";
+      |           ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:94:11: warning: unused variable 'BMP180_AltString' [-Wunused-variable]
+   94 |      char BMP180_AltString[] = "The Altitude is ";
+      |           ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:93:11: warning: unused variable 'BMP180_PressString' [-Wunused-variable]
+   93 |      char BMP180_PressString[] = "The Surface Pressure is ";
+      |           ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:92:11: warning: unused variable 'SEN1367_MoistString' [-Wunused-variable]
+   92 |      char SEN1367_MoistString[] = "\n\rThe Soil Moisture is ";
+      |           ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:91:11: warning: unused variable 'DS18B20_TempString' [-Wunused-variable]
+   91 |      char DS18B20_TempString[] = "The Internal Temperature is ";
+      |           ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:90:11: warning: unused variable 'PHOTO_String' [-Wunused-variable]
+   90 |      char PHOTO_String[] = "\n\rThe Photoresistor Voltage is "; //270 ohm resistor
+      |           ^~~~~~~~~~~~
+../Core/Src/main.c:89:7: warning: unused variable 'DHT22_HumString' [-Wunused-variable]
+   89 |  char DHT22_HumString[] = "The Humidity is ";
+      |       ^~~~~~~~~~~~~~~
+../Core/Src/main.c:88:7: warning: unused variable 'DHT22_TempString' [-Wunused-variable]
+   88 |  char DHT22_TempString[] = "The External Temperature is ";
+      |       ^~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50776	    124	   2180	  53080	   cf58	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+14:18:14 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:181:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  181 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:183:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  183 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:257:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  257 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer); //Convert Float to String
+      |    ^~~~
+../Core/Src/main.c:127:9: warning: unused variable 'newLineBuffer' [-Wunused-variable]
+  127 |    char newLineBuffer[50];
+      |         ^~~~~~~~~~~~~
+../Core/Src/main.c:119:9: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  119 |    char voltBuffer[50];
+      |         ^~~~~~~~~~
+../Core/Src/main.c:115:11: warning: unused variable 'skipp' [-Wunused-variable]
+  115 |   uint8_t skipp[] = "Y";
+      |           ^~~~~
+../Core/Src/main.c:100:22: warning: variable 'sum' set but not used [-Wunused-but-set-variable]
+  100 |  uint16_t temp, hum, sum;
+      |                      ^~~
+../Core/Src/main.c:96:11: warning: unused variable 'newLine' [-Wunused-variable]
+   96 |      char newLine[] = "\n\r";
+      |           ^~~~~~~
+../Core/Src/main.c:95:11: warning: unused variable 'BMP180_TempString' [-Wunused-variable]
+   95 |      char BMP180_TempString[] = "\n\rThe BMP Temperature is ";
+      |           ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:94:11: warning: unused variable 'BMP180_AltString' [-Wunused-variable]
+   94 |      char BMP180_AltString[] = "The Altitude is ";
+      |           ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:93:11: warning: unused variable 'BMP180_PressString' [-Wunused-variable]
+   93 |      char BMP180_PressString[] = "The Surface Pressure is ";
+      |           ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:92:11: warning: unused variable 'SEN1367_MoistString' [-Wunused-variable]
+   92 |      char SEN1367_MoistString[] = "\n\rThe Soil Moisture is ";
+      |           ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:91:11: warning: unused variable 'DS18B20_TempString' [-Wunused-variable]
+   91 |      char DS18B20_TempString[] = "The Internal Temperature is ";
+      |           ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:90:11: warning: unused variable 'PHOTO_String' [-Wunused-variable]
+   90 |      char PHOTO_String[] = "\n\rThe Photoresistor Voltage is "; //270 ohm resistor
+      |           ^~~~~~~~~~~~
+../Core/Src/main.c:89:7: warning: unused variable 'DHT22_HumString' [-Wunused-variable]
+   89 |  char DHT22_HumString[] = "The Humidity is ";
+      |       ^~~~~~~~~~~~~~~
+../Core/Src/main.c:88:7: warning: unused variable 'DHT22_TempString' [-Wunused-variable]
+   88 |  char DHT22_TempString[] = "The External Temperature is ";
+      |       ^~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50696	    124	   2180	  53000	   cf08	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+15:25:12 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:181:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  181 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:183:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  183 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:257:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  257 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer); //Convert Float to String
+      |    ^~~~
+../Core/Src/main.c:127:9: warning: unused variable 'newLineBuffer' [-Wunused-variable]
+  127 |    char newLineBuffer[50];
+      |         ^~~~~~~~~~~~~
+../Core/Src/main.c:119:9: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  119 |    char voltBuffer[50];
+      |         ^~~~~~~~~~
+../Core/Src/main.c:115:11: warning: unused variable 'skipp' [-Wunused-variable]
+  115 |   uint8_t skipp[] = "Y";
+      |           ^~~~~
+../Core/Src/main.c:100:22: warning: variable 'sum' set but not used [-Wunused-but-set-variable]
+  100 |  uint16_t temp, hum, sum;
+      |                      ^~~
+../Core/Src/main.c:96:11: warning: unused variable 'newLine' [-Wunused-variable]
+   96 |      char newLine[] = "\n\r";
+      |           ^~~~~~~
+../Core/Src/main.c:95:11: warning: unused variable 'BMP180_TempString' [-Wunused-variable]
+   95 |      char BMP180_TempString[] = "\n\rThe BMP Temperature is ";
+      |           ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:94:11: warning: unused variable 'BMP180_AltString' [-Wunused-variable]
+   94 |      char BMP180_AltString[] = "The Altitude is ";
+      |           ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:93:11: warning: unused variable 'BMP180_PressString' [-Wunused-variable]
+   93 |      char BMP180_PressString[] = "The Surface Pressure is ";
+      |           ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:92:11: warning: unused variable 'SEN1367_MoistString' [-Wunused-variable]
+   92 |      char SEN1367_MoistString[] = "\n\rThe Soil Moisture is ";
+      |           ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:91:11: warning: unused variable 'DS18B20_TempString' [-Wunused-variable]
+   91 |      char DS18B20_TempString[] = "The Internal Temperature is ";
+      |           ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:90:11: warning: unused variable 'PHOTO_String' [-Wunused-variable]
+   90 |      char PHOTO_String[] = "\n\rThe Photoresistor Voltage is "; //270 ohm resistor
+      |           ^~~~~~~~~~~~
+../Core/Src/main.c:89:7: warning: unused variable 'DHT22_HumString' [-Wunused-variable]
+   89 |  char DHT22_HumString[] = "The Humidity is ";
+      |       ^~~~~~~~~~~~~~~
+../Core/Src/main.c:88:7: warning: unused variable 'DHT22_TempString' [-Wunused-variable]
+   88 |  char DHT22_TempString[] = "The External Temperature is ";
+      |       ^~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50696	    124	   2180	  53000	   cf08	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+15:32:03 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/DS18B20.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/DS18B20.d" -MT"Core/Src/DS18B20.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/DS18B20.o"
+../Core/Src/DS18B20.c: In function 'dsInit':
+../Core/Src/DS18B20.c:41:11: error: expected ';' before 'return'
+   41 |  delay(50)
+      |           ^
+      |           ;
+   42 |  //delay(400);
+   43 |  return r;
+      |  ~~~~~~    
+../Core/Src/DS18B20.c:28:10: warning: variable 'r' set but not used [-Wunused-but-set-variable]
+   28 |  uint8_t r = 0;
+      |          ^
+../Core/Src/DS18B20.c:44:1: warning: control reaches end of non-void function [-Wreturn-type]
+   44 | }
+      | ^
+make: *** [Core/Src/subdir.mk:46: Core/Src/DS18B20.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:32:38 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/DS18B20.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/DS18B20.d" -MT"Core/Src/DS18B20.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/DS18B20.o"
+../Core/Src/DS18B20.c: In function 'dsInit':
+../Core/Src/DS18B20.c:41:11: error: expected ';' before 'return'
+   41 |  delay(50)
+      |           ^
+      |           ;
+   42 |  //delay(400);
+   43 |  return r;
+      |  ~~~~~~    
+../Core/Src/DS18B20.c:28:10: warning: variable 'r' set but not used [-Wunused-but-set-variable]
+   28 |  uint8_t r = 0;
+      |          ^
+../Core/Src/DS18B20.c:44:1: warning: control reaches end of non-void function [-Wreturn-type]
+   44 | }
+      | ^
+make: *** [Core/Src/subdir.mk:46: Core/Src/DS18B20.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:32:59 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/DS18B20.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/DS18B20.d" -MT"Core/Src/DS18B20.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/DS18B20.o"
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50688	    124	   2180	  52992	   cf00	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+15:33:03 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-size   PCBv1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50688	    124	   2180	  52992	   cf00	PCBv1.elf
+Finished building: default.size.stdout
+ 
+15:59:06 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/DHT22.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/DHT22.d" -MT"Core/Src/DHT22.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/DHT22.o"
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50676	    124	   2180	  52980	   cef4	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+16:01:26 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/DHT22.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/DHT22.d" -MT"Core/Src/DHT22.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/DHT22.o"
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50676	    124	   2180	  52980	   cef4	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+16:02:57 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/DHT22.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/DHT22.d" -MT"Core/Src/DHT22.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/DHT22.o"
+../Core/Src/DHT22.c: In function 'sensorInit':
+../Core/Src/DHT22.c:34:2: warning: implicit declaration of function 'HAL_delay'; did you mean 'HAL_Delay'? [-Wimplicit-function-declaration]
+   34 |  HAL_delay(50);
+      |  ^~~~~~~~~
+      |  HAL_Delay
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.8.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/DHT22.o: in function `sensorInit':
+C:/Users/Ming/Documents/GitHub/Gem/PCBv1/Debug/../Core/Src/DHT22.c:34: undefined reference to `HAL_delay'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: PCBv1.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:03:23 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/DHT22.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/DHT22.d" -MT"Core/Src/DHT22.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/DHT22.o"
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50676	    124	   2180	  52980	   cef4	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+16:03:24 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-size   PCBv1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50676	    124	   2180	  52980	   cef4	PCBv1.elf
+Finished building: default.size.stdout
+ 
+16:05:15 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/DHT22.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/DHT22.d" -MT"Core/Src/DHT22.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/DHT22.o"
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50688	    124	   2180	  52992	   cf00	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+16:06:50 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/DHT22.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/DHT22.d" -MT"Core/Src/DHT22.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/DHT22.o"
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50680	    124	   2180	  52984	   cef8	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+16:09:07 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/DHT22.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/DHT22.d" -MT"Core/Src/DHT22.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/DHT22.o"
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50680	    124	   2180	  52984	   cef8	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+16:11:15 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/DHT22.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/DHT22.d" -MT"Core/Src/DHT22.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/DHT22.o"
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50684	    124	   2180	  52988	   cefc	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+16:12:23 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/DHT22.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/DHT22.d" -MT"Core/Src/DHT22.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/DHT22.o"
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50684	    124	   2180	  52988	   cefc	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+16:16:34 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/DHT22.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/DHT22.d" -MT"Core/Src/DHT22.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/DHT22.o"
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50688	    124	   2180	  52992	   cf00	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+16:18:30 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/DHT22.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/DHT22.d" -MT"Core/Src/DHT22.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/DHT22.o"
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50688	    124	   2180	  52992	   cf00	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+16:19:53 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/DHT22.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/DHT22.d" -MT"Core/Src/DHT22.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/DHT22.o"
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50688	    124	   2180	  52992	   cf00	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+16:22:28 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/DHT22.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/DHT22.d" -MT"Core/Src/DHT22.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/DHT22.o"
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50692	    124	   2180	  52996	   cf04	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+16:24:13 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/DHT22.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/DHT22.d" -MT"Core/Src/DHT22.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/DHT22.o"
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50688	    124	   2180	  52992	   cf00	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+16:25:42 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/DHT22.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/DHT22.d" -MT"Core/Src/DHT22.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/DHT22.o"
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50688	    124	   2180	  52992	   cf00	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+16:27:57 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/DHT22.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/DHT22.d" -MT"Core/Src/DHT22.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/DHT22.o"
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50676	    124	   2180	  52980	   cef4	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+16:30:20 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-size   PCBv1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50676	    124	   2180	  52980	   cef4	PCBv1.elf
+Finished building: default.size.stdout
+ 
+16:34:42 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:181:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  181 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:183:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  183 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:263:7: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  263 |       gcvt(DHT_Temp, 6, DHT22_TempBuffer);
+      |       ^~~~
+../Core/Src/main.c:127:9: warning: unused variable 'newLineBuffer' [-Wunused-variable]
+  127 |    char newLineBuffer[50];
+      |         ^~~~~~~~~~~~~
+../Core/Src/main.c:125:9: warning: unused variable 'BMP180_TempBuffer' [-Wunused-variable]
+  125 |    char BMP180_TempBuffer[50];
+      |         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:124:9: warning: unused variable 'BMP180_AltBuffer' [-Wunused-variable]
+  124 |    char BMP180_AltBuffer[50];
+      |         ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:123:9: warning: unused variable 'BMP180_PressBuffer' [-Wunused-variable]
+  123 |    char BMP180_PressBuffer[50];
+      |         ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:119:9: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  119 |    char voltBuffer[50];
+      |         ^~~~~~~~~~
+../Core/Src/main.c:115:11: warning: unused variable 'skipp' [-Wunused-variable]
+  115 |   uint8_t skipp[] = "Y";
+      |           ^~~~~
+../Core/Src/main.c:100:22: warning: variable 'sum' set but not used [-Wunused-but-set-variable]
+  100 |  uint16_t temp, hum, sum;
+      |                      ^~~
+../Core/Src/main.c:96:11: warning: unused variable 'newLine' [-Wunused-variable]
+   96 |      char newLine[] = "\n\r";
+      |           ^~~~~~~
+../Core/Src/main.c:95:11: warning: unused variable 'BMP180_TempString' [-Wunused-variable]
+   95 |      char BMP180_TempString[] = "\n\rThe BMP Temperature is ";
+      |           ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:94:11: warning: unused variable 'BMP180_AltString' [-Wunused-variable]
+   94 |      char BMP180_AltString[] = "The Altitude is ";
+      |           ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:93:11: warning: unused variable 'BMP180_PressString' [-Wunused-variable]
+   93 |      char BMP180_PressString[] = "The Surface Pressure is ";
+      |           ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:92:11: warning: unused variable 'SEN1367_MoistString' [-Wunused-variable]
+   92 |      char SEN1367_MoistString[] = "\n\rThe Soil Moisture is ";
+      |           ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:91:11: warning: unused variable 'DS18B20_TempString' [-Wunused-variable]
+   91 |      char DS18B20_TempString[] = "The Internal Temperature is ";
+      |           ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:90:11: warning: unused variable 'PHOTO_String' [-Wunused-variable]
+   90 |      char PHOTO_String[] = "\n\rThe Photoresistor Voltage is "; //270 ohm resistor
+      |           ^~~~~~~~~~~~
+../Core/Src/main.c:89:7: warning: unused variable 'DHT22_HumString' [-Wunused-variable]
+   89 |  char DHT22_HumString[] = "The Humidity is ";
+      |       ^~~~~~~~~~~~~~~
+../Core/Src/main.c:88:7: warning: unused variable 'DHT22_TempString' [-Wunused-variable]
+   88 |  char DHT22_TempString[] = "The External Temperature is ";
+      |       ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:87:27: warning: variable 'BMP_Pressure' set but not used [-Wunused-but-set-variable]
+   87 |  float BMP_Temp, BMP_Alt, BMP_Pressure;
+      |                           ^~~~~~~~~~~~
+../Core/Src/main.c:87:18: warning: variable 'BMP_Alt' set but not used [-Wunused-but-set-variable]
+   87 |  float BMP_Temp, BMP_Alt, BMP_Pressure;
+      |                  ^~~~~~~
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50604	    124	   2180	  52908	   ceac	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+18:17:30 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:181:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  181 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:183:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  183 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:263:7: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  263 |       gcvt(DHT_Temp, 6, DHT22_TempBuffer);
+      |       ^~~~
+../Core/Src/main.c:127:9: warning: unused variable 'newLineBuffer' [-Wunused-variable]
+  127 |    char newLineBuffer[50];
+      |         ^~~~~~~~~~~~~
+../Core/Src/main.c:125:9: warning: unused variable 'BMP180_TempBuffer' [-Wunused-variable]
+  125 |    char BMP180_TempBuffer[50];
+      |         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:124:9: warning: unused variable 'BMP180_AltBuffer' [-Wunused-variable]
+  124 |    char BMP180_AltBuffer[50];
+      |         ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:123:9: warning: unused variable 'BMP180_PressBuffer' [-Wunused-variable]
+  123 |    char BMP180_PressBuffer[50];
+      |         ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:119:9: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  119 |    char voltBuffer[50];
+      |         ^~~~~~~~~~
+../Core/Src/main.c:115:11: warning: unused variable 'skipp' [-Wunused-variable]
+  115 |   uint8_t skipp[] = "Y";
+      |           ^~~~~
+../Core/Src/main.c:100:22: warning: variable 'sum' set but not used [-Wunused-but-set-variable]
+  100 |  uint16_t temp, hum, sum;
+      |                      ^~~
+../Core/Src/main.c:96:11: warning: unused variable 'newLine' [-Wunused-variable]
+   96 |      char newLine[] = "\n\r";
+      |           ^~~~~~~
+../Core/Src/main.c:95:11: warning: unused variable 'BMP180_TempString' [-Wunused-variable]
+   95 |      char BMP180_TempString[] = "\n\rThe BMP Temperature is ";
+      |           ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:94:11: warning: unused variable 'BMP180_AltString' [-Wunused-variable]
+   94 |      char BMP180_AltString[] = "The Altitude is ";
+      |           ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:93:11: warning: unused variable 'BMP180_PressString' [-Wunused-variable]
+   93 |      char BMP180_PressString[] = "The Surface Pressure is ";
+      |           ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:92:11: warning: unused variable 'SEN1367_MoistString' [-Wunused-variable]
+   92 |      char SEN1367_MoistString[] = "\n\rThe Soil Moisture is ";
+      |           ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:91:11: warning: unused variable 'DS18B20_TempString' [-Wunused-variable]
+   91 |      char DS18B20_TempString[] = "The Internal Temperature is ";
+      |           ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:90:11: warning: unused variable 'PHOTO_String' [-Wunused-variable]
+   90 |      char PHOTO_String[] = "\n\rThe Photoresistor Voltage is "; //270 ohm resistor
+      |           ^~~~~~~~~~~~
+../Core/Src/main.c:89:7: warning: unused variable 'DHT22_HumString' [-Wunused-variable]
+   89 |  char DHT22_HumString[] = "The Humidity is ";
+      |       ^~~~~~~~~~~~~~~
+../Core/Src/main.c:88:7: warning: unused variable 'DHT22_TempString' [-Wunused-variable]
+   88 |  char DHT22_TempString[] = "The External Temperature is ";
+      |       ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:87:27: warning: variable 'BMP_Pressure' set but not used [-Wunused-but-set-variable]
+   87 |  float BMP_Temp, BMP_Alt, BMP_Pressure;
+      |                           ^~~~~~~~~~~~
+../Core/Src/main.c:87:18: warning: variable 'BMP_Alt' set but not used [-Wunused-but-set-variable]
+   87 |  float BMP_Temp, BMP_Alt, BMP_Pressure;
+      |                  ^~~~~~~
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50656	    124	   2180	  52960	   cee0	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
