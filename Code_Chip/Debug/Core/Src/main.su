@@ -1,0 +1,13 @@
+main.c:85:5:main	688	static
+main.c:290:6:SystemClock_Config	128	static
+main.c:340:13:MX_ADC_Init	16	static
+main.c:401:13:MX_I2C1_Init	8	static
+main.c:447:13:MX_TIM2_Init	32	static
+main.c:492:13:MX_USART1_UART_Init	8	static
+main.c:527:13:MX_USART4_UART_Init	8	static
+main.c:562:13:MX_GPIO_Init	48	static
+main.c:584:6:get_BMP180Readings	24	static
+main.c:590:6:get_DHT22Readings	32	static
+main.c:608:6:get_DS18B20Readings	32	static
+main.c:628:6:get_moistureReadings	16	static
+main.c:645:6:Error_Handler	8	static,ignoring_inline_asm
