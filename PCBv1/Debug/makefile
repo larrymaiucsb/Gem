@@ -61,7 +61,7 @@ main-build: PCBv1.elf secondary-outputs
 
 # Tool invocations
 PCBv1.elf: $(OBJS) $(USER_OBJS) C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

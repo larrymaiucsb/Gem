@@ -1287,3 +1287,1710 @@ Finished building: PCBv1.bin
  
 Finished building: PCBv1.list
  
+13:47:41 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:171:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  171 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:173:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  173 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:216:4: error: 'p' undeclared (first use in this function)
+  216 |    p = dsInit(); //Initialize the DS18B20
+      |    ^
+../Core/Src/main.c:216:4: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:264:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  264 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer); //Convert Float to String
+      |    ^~~~
+../Core/Src/main.c:266:9: error: 'BMP_Temp' undeclared (first use in this function); did you mean 'BMP_TempC'?
+  266 |    gcvt(BMP_Temp, 6, BMP180_TempBuffer); //Convert Float to String
+      |         ^~~~~~~~
+      |         BMP_TempC
+../Core/Src/main.c:270:12: error: 'DHT_Temp' undeclared (first use in this function); did you mean 'DHT_TempC'?
+  270 |       gcvt(DHT_Temp, 6, DHT22_TempBuffer);
+      |            ^~~~~~~~
+      |            DHT_TempC
+../Core/Src/main.c:114:7: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  114 |  char voltBuffer[50];
+      |       ^~~~~~~~~~
+../Core/Src/main.c:93:8: warning: variable 'BMP_TempC' set but not used [-Wunused-but-set-variable]
+   93 |  float BMP_TempC, BMP_Alt, BMP_Pressure;
+      |        ^~~~~~~~~
+../Core/Src/main.c: In function 'get_DHT22Readings':
+../Core/Src/main.c:648:7: error: 'thp' undeclared (first use in this function)
+  648 |    if(thp[4]) {
+      |       ^~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:48:59 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:171:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  171 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:173:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  173 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:264:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  264 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer); //Convert Float to String
+      |    ^~~~
+../Core/Src/main.c:266:9: error: 'BMP_Temp' undeclared (first use in this function); did you mean 'BMP_TempC'?
+  266 |    gcvt(BMP_Temp, 6, BMP180_TempBuffer); //Convert Float to String
+      |         ^~~~~~~~
+      |         BMP_TempC
+../Core/Src/main.c:266:9: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:270:12: error: 'DHT_Temp' undeclared (first use in this function); did you mean 'DHT_TempC'?
+  270 |       gcvt(DHT_Temp, 6, DHT22_TempBuffer);
+      |            ^~~~~~~~
+      |            DHT_TempC
+../Core/Src/main.c:114:7: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  114 |  char voltBuffer[50];
+      |       ^~~~~~~~~~
+../Core/Src/main.c:93:8: warning: variable 'BMP_TempC' set but not used [-Wunused-but-set-variable]
+   93 |  float BMP_TempC, BMP_Alt, BMP_Pressure;
+      |        ^~~~~~~~~
+../Core/Src/main.c: In function 'get_DHT22Readings':
+../Core/Src/main.c:648:7: error: 'thp' undeclared (first use in this function)
+  648 |    if(thp[4]) {
+      |       ^~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:49:32 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:171:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  171 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:173:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  173 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:264:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  264 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer); //Convert Float to String
+      |    ^~~~
+../Core/Src/main.c:270:12: error: 'DHT_Temp' undeclared (first use in this function); did you mean 'DHT_TempC'?
+  270 |       gcvt(DHT_Temp, 6, DHT22_TempBuffer);
+      |            ^~~~~~~~
+      |            DHT_TempC
+../Core/Src/main.c:270:12: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:114:7: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  114 |  char voltBuffer[50];
+      |       ^~~~~~~~~~
+../Core/Src/main.c: In function 'get_DHT22Readings':
+../Core/Src/main.c:648:7: error: 'thp' undeclared (first use in this function)
+  648 |    if(thp[4]) {
+      |       ^~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:49:51 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:171:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  171 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:173:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  173 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:264:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  264 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer); //Convert Float to String
+      |    ^~~~
+../Core/Src/main.c:114:7: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  114 |  char voltBuffer[50];
+      |       ^~~~~~~~~~
+../Core/Src/main.c: In function 'get_DHT22Readings':
+../Core/Src/main.c:648:7: error: 'thp' undeclared (first use in this function)
+  648 |    if(thp[4]) {
+      |       ^~~
+../Core/Src/main.c:648:7: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:50:37 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:171:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  171 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:173:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  173 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:264:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  264 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer); //Convert Float to String
+      |    ^~~~
+../Core/Src/main.c:114:7: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  114 |  char voltBuffer[50];
+      |       ^~~~~~~~~~
+../Core/Src/main.c: In function 'get_DHT22Readings':
+../Core/Src/main.c:655:21: error: 'thp' undeclared (first use in this function)
+  655 |       u16Arr[0] = ((thp[0] << 8) | thp[1]);   //Assemble Temperature
+      |                     ^~~
+../Core/Src/main.c:655:21: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:50:54 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:171:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  171 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:173:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  173 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:264:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  264 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer); //Convert Float to String
+      |    ^~~~
+../Core/Src/main.c:114:7: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  114 |  char voltBuffer[50];
+      |       ^~~~~~~~~~
+../Core/Src/main.c: In function 'get_DHT22Readings':
+../Core/Src/main.c:655:38: error: 'thp' undeclared (first use in this function)
+  655 |       u16Arr[0] = ((u8Arr[0] << 8) | thp[1]);   //Assemble Temperature
+      |                                      ^~~
+../Core/Src/main.c:655:38: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:51:18 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:171:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  171 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:173:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  173 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:264:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  264 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer); //Convert Float to String
+      |    ^~~~
+../Core/Src/main.c:114:7: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  114 |  char voltBuffer[50];
+      |       ^~~~~~~~~~
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50312	    124	   2180	  52616	   cd88	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+13:51:23 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-size   PCBv1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50312	    124	   2180	  52616	   cd88	PCBv1.elf
+Finished building: default.size.stdout
+ 
+13:51:56 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-size   PCBv1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50312	    124	   2180	  52616	   cd88	PCBv1.elf
+Finished building: default.size.stdout
+ 
+14:09:43 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:173:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  173 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:175:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  175 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:218:24: error: invalid type argument of unary '*' (have 'int')
+  218 |    get_DS18B20Readings(*thp[4], DS18B20_temp, &DS18B20_T, &internalTemp);
+      |                        ^~~~~~~
+../Core/Src/main.c:218:33: warning: passing argument 2 of 'get_DS18B20Readings' from incompatible pointer type [-Wincompatible-pointer-types]
+  218 |    get_DS18B20Readings(*thp[4], DS18B20_temp, &DS18B20_T, &internalTemp);
+      |                                 ^~~~~~~~~~~~
+      |                                 |
+      |                                 uint8_t ** {aka unsigned char **}
+../Core/Src/main.c:71:55: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t **' {aka 'unsigned char **'}
+   71 | void get_DS18B20Readings(uint8_t *statusPtr, uint8_t *u8Arr, uint16_t *u16Ptr, float *floatPtr);
+      |                                              ~~~~~~~~~^~~~~
+../Core/Src/main.c:250:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  250 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer); //Convert Float to String
+      |    ^~~~
+../Core/Src/main.c:116:7: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  116 |  char voltBuffer[50];
+      |       ^~~~~~~~~~
+../Core/Src/main.c:108:25: warning: unused variable 'DS18B20_Temp2' [-Wunused-variable]
+  108 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |                         ^~~~~~~~~~~~~
+../Core/Src/main.c:108:10: warning: unused variable 'DS18B20_Temp1' [-Wunused-variable]
+  108 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |          ^~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:11:06 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:173:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  173 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:175:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  175 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:218:33: warning: passing argument 2 of 'get_DS18B20Readings' from incompatible pointer type [-Wincompatible-pointer-types]
+  218 |    get_DS18B20Readings(&thp[4], DS18B20_tempArr, &DS18B20_T, &internalTemp);
+      |                                 ^~~~~~~~~~~~~~~
+      |                                 |
+      |                                 uint8_t ** {aka unsigned char **}
+../Core/Src/main.c:71:55: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t **' {aka 'unsigned char **'}
+   71 | void get_DS18B20Readings(uint8_t *statusPtr, uint8_t *u8Arr, uint16_t *u16Ptr, float *floatPtr);
+      |                                              ~~~~~~~~~^~~~~
+../Core/Src/main.c:250:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  250 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer); //Convert Float to String
+      |    ^~~~
+../Core/Src/main.c:116:7: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  116 |  char voltBuffer[50];
+      |       ^~~~~~~~~~
+../Core/Src/main.c:108:25: warning: unused variable 'DS18B20_Temp2' [-Wunused-variable]
+  108 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |                         ^~~~~~~~~~~~~
+../Core/Src/main.c:108:10: warning: unused variable 'DS18B20_Temp1' [-Wunused-variable]
+  108 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |          ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50336	    124	   2180	  52640	   cda0	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+14:11:09 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-size   PCBv1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50336	    124	   2180	  52640	   cda0	PCBv1.elf
+Finished building: default.size.stdout
+ 
+14:15:53 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:173:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  173 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:175:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  175 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:198:33: warning: passing argument 2 of 'get_DS18B20Readings' from incompatible pointer type [-Wincompatible-pointer-types]
+  198 |    get_DS18B20Readings(&thp[4], DS18B20_tempArr, &DS18B20_T, &internalTemp);
+      |                                 ^~~~~~~~~~~~~~~
+      |                                 |
+      |                                 uint8_t ** {aka unsigned char **}
+../Core/Src/main.c:71:55: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t **' {aka 'unsigned char **'}
+   71 | void get_DS18B20Readings(uint8_t *statusPtr, uint8_t *u8Arr, uint16_t *u16Ptr, float *floatPtr);
+      |                                              ~~~~~~~~~^~~~~
+../Core/Src/main.c:230:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  230 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer); //Convert Float to String
+      |    ^~~~
+../Core/Src/main.c:302:32: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  302 |     HAL_UART_Transmit(&huart4, (uint8_t*)moisture, strlen(moistbuffer), HAL_MAX_DELAY);
+      |                                ^
+../Core/Src/main.c:116:7: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  116 |  char voltBuffer[50];
+      |       ^~~~~~~~~~
+../Core/Src/main.c:108:25: warning: unused variable 'DS18B20_Temp2' [-Wunused-variable]
+  108 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |                         ^~~~~~~~~~~~~
+../Core/Src/main.c:108:10: warning: unused variable 'DS18B20_Temp1' [-Wunused-variable]
+  108 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |          ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50396	    124	   2180	  52700	   cddc	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+14:22:41 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:174:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  174 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:176:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  176 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:199:33: warning: passing argument 2 of 'get_DS18B20Readings' from incompatible pointer type [-Wincompatible-pointer-types]
+  199 |    get_DS18B20Readings(&thp[4], DS18B20_tempArr, &DS18B20_T, &internalTemp);
+      |                                 ^~~~~~~~~~~~~~~
+      |                                 |
+      |                                 uint8_t ** {aka unsigned char **}
+../Core/Src/main.c:71:55: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t **' {aka 'unsigned char **'}
+   71 | void get_DS18B20Readings(uint8_t *statusPtr, uint8_t *u8Arr, uint16_t *u16Ptr, float *floatPtr);
+      |                                              ~~~~~~~~~^~~~~
+../Core/Src/main.c:231:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  231 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer);
+      |    ^~~~
+../Core/Src/main.c:303:32: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  303 |     HAL_UART_Transmit(&huart4, (uint8_t*)moisture, strlen(moistbuffer), HAL_MAX_DELAY);
+      |                                ^
+../Core/Src/main.c:116:7: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  116 |  char voltBuffer[50];
+      |       ^~~~~~~~~~
+../Core/Src/main.c:108:25: warning: unused variable 'DS18B20_Temp2' [-Wunused-variable]
+  108 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |                         ^~~~~~~~~~~~~
+../Core/Src/main.c:108:10: warning: unused variable 'DS18B20_Temp1' [-Wunused-variable]
+  108 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |          ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50396	    124	   2180	  52700	   cddc	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+14:25:27 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:174:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  174 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:176:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  176 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:199:33: warning: passing argument 2 of 'get_DS18B20Readings' from incompatible pointer type [-Wincompatible-pointer-types]
+  199 |    get_DS18B20Readings(&thp[4], DS18B20_tempArr, &DS18B20_T, &internalTemp);
+      |                                 ^~~~~~~~~~~~~~~
+      |                                 |
+      |                                 uint8_t ** {aka unsigned char **}
+../Core/Src/main.c:71:55: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t **' {aka 'unsigned char **'}
+   71 | void get_DS18B20Readings(uint8_t *statusPtr, uint8_t *u8Arr, uint16_t *u16Ptr, float *floatPtr);
+      |                                              ~~~~~~~~~^~~~~
+../Core/Src/main.c:231:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  231 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer);
+      |    ^~~~
+../Core/Src/main.c:303:42: error: 'moisturebuffer' undeclared (first use in this function); did you mean 'moistbuffer'?
+  303 |     HAL_UART_Transmit(&huart4, (uint8_t*)moisturebuffer, strlen(moistbuffer), HAL_MAX_DELAY);
+      |                                          ^~~~~~~~~~~~~~
+      |                                          moistbuffer
+../Core/Src/main.c:303:42: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:116:7: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  116 |  char voltBuffer[50];
+      |       ^~~~~~~~~~
+../Core/Src/main.c:108:25: warning: unused variable 'DS18B20_Temp2' [-Wunused-variable]
+  108 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |                         ^~~~~~~~~~~~~
+../Core/Src/main.c:108:10: warning: unused variable 'DS18B20_Temp1' [-Wunused-variable]
+  108 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |          ^~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:26:00 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:174:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  174 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:176:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  176 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:199:33: warning: passing argument 2 of 'get_DS18B20Readings' from incompatible pointer type [-Wincompatible-pointer-types]
+  199 |    get_DS18B20Readings(&thp[4], DS18B20_tempArr, &DS18B20_T, &internalTemp);
+      |                                 ^~~~~~~~~~~~~~~
+      |                                 |
+      |                                 uint8_t ** {aka unsigned char **}
+../Core/Src/main.c:71:55: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t **' {aka 'unsigned char **'}
+   71 | void get_DS18B20Readings(uint8_t *statusPtr, uint8_t *u8Arr, uint16_t *u16Ptr, float *floatPtr);
+      |                                              ~~~~~~~~~^~~~~
+../Core/Src/main.c:231:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  231 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer);
+      |    ^~~~
+../Core/Src/main.c:116:7: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  116 |  char voltBuffer[50];
+      |       ^~~~~~~~~~
+../Core/Src/main.c:108:25: warning: unused variable 'DS18B20_Temp2' [-Wunused-variable]
+  108 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |                         ^~~~~~~~~~~~~
+../Core/Src/main.c:108:10: warning: unused variable 'DS18B20_Temp1' [-Wunused-variable]
+  108 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |          ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50388	    124	   2180	  52692	   cdd4	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+14:26:04 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-size   PCBv1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50388	    124	   2180	  52692	   cdd4	PCBv1.elf
+Finished building: default.size.stdout
+ 
+14:33:47 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:175:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  175 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:177:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  177 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:200:33: warning: passing argument 2 of 'get_DS18B20Readings' from incompatible pointer type [-Wincompatible-pointer-types]
+  200 |    get_DS18B20Readings(&thp[4], DS18B20_tempArr, &DS18B20_T, &internalTemp);
+      |                                 ^~~~~~~~~~~~~~~
+      |                                 |
+      |                                 uint8_t ** {aka unsigned char **}
+../Core/Src/main.c:71:55: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t **' {aka 'unsigned char **'}
+   71 | void get_DS18B20Readings(uint8_t *statusPtr, uint8_t *u8Arr, uint16_t *u16Ptr, float *floatPtr);
+      |                                              ~~~~~~~~~^~~~~
+../Core/Src/main.c:236:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  236 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer);
+      |    ^~~~
+../Core/Src/main.c:121:25: warning: unused variable 'sConfig2' [-Wunused-variable]
+  121 |  ADC_ChannelConfTypeDef sConfig2 = {13};
+      |                         ^~~~~~~~
+../Core/Src/main.c:117:7: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  117 |  char voltBuffer[50];
+      |       ^~~~~~~~~~
+../Core/Src/main.c:109:25: warning: unused variable 'DS18B20_Temp2' [-Wunused-variable]
+  109 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |                         ^~~~~~~~~~~~~
+../Core/Src/main.c:109:10: warning: unused variable 'DS18B20_Temp1' [-Wunused-variable]
+  109 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |          ^~~~~~~~~~~~~
+../Core/Src/main.c: In function 'get_moistureReadings':
+../Core/Src/main.c:655:14: error: 'ADC_config' is a pointer; did you mean to use '->'?
+  655 |    ADC_config.Channel = ADC_CHANNEL_13;
+      |              ^
+      |              ->
+../Core/Src/main.c:656:36: warning: passing argument 2 of 'HAL_ADC_ConfigChannel' from incompatible pointer type [-Wincompatible-pointer-types]
+  656 |    if(HAL_ADC_ConfigChannel(&hadc, &ADC_config) != HAL_OK) {
+      |                                    ^~~~~~~~~~~
+      |                                    |
+      |                                    ADC_ChannelConfTypeDef ** {aka struct <anonymous> **}
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:207,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h:1156:93: note: expected 'ADC_ChannelConfTypeDef *' {aka 'struct <anonymous> *'} but argument is of type 'ADC_ChannelConfTypeDef **' {aka 'struct <anonymous> **'}
+ 1156 | HAL_StatusTypeDef    HAL_ADC_ConfigChannel(ADC_HandleTypeDef* hadc, ADC_ChannelConfTypeDef* sConfig);
+      |                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+../Core/Src/main.c:661:16: warning: assignment to 'uint16_t *' {aka 'short unsigned int *'} from 'uint32_t' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+  661 |    moisturePtr = HAL_ADC_GetValue(&hadc);
+      |                ^
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:34:24 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:175:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  175 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:177:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  177 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:200:33: warning: passing argument 2 of 'get_DS18B20Readings' from incompatible pointer type [-Wincompatible-pointer-types]
+  200 |    get_DS18B20Readings(&thp[4], DS18B20_tempArr, &DS18B20_T, &internalTemp);
+      |                                 ^~~~~~~~~~~~~~~
+      |                                 |
+      |                                 uint8_t ** {aka unsigned char **}
+../Core/Src/main.c:71:55: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t **' {aka 'unsigned char **'}
+   71 | void get_DS18B20Readings(uint8_t *statusPtr, uint8_t *u8Arr, uint16_t *u16Ptr, float *floatPtr);
+      |                                              ~~~~~~~~~^~~~~
+../Core/Src/main.c:236:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  236 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer);
+      |    ^~~~
+../Core/Src/main.c:121:25: warning: unused variable 'sConfig2' [-Wunused-variable]
+  121 |  ADC_ChannelConfTypeDef sConfig2 = {13};
+      |                         ^~~~~~~~
+../Core/Src/main.c:117:7: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  117 |  char voltBuffer[50];
+      |       ^~~~~~~~~~
+../Core/Src/main.c:109:25: warning: unused variable 'DS18B20_Temp2' [-Wunused-variable]
+  109 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |                         ^~~~~~~~~~~~~
+../Core/Src/main.c:109:10: warning: unused variable 'DS18B20_Temp1' [-Wunused-variable]
+  109 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |          ^~~~~~~~~~~~~
+../Core/Src/main.c: In function 'get_moistureReadings':
+../Core/Src/main.c:655:18: error: 'ADC_configPtr' is a pointer; did you mean to use '->'?
+  655 |    *ADC_configPtr.Channel = ADC_CHANNEL_13;
+      |                  ^
+      |                  ->
+../Core/Src/main.c:661:16: warning: assignment to 'uint16_t *' {aka 'short unsigned int *'} from 'uint32_t' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+  661 |    moisturePtr = HAL_ADC_GetValue(&hadc);
+      |                ^
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:35:27 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:175:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  175 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:177:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  177 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:200:33: warning: passing argument 2 of 'get_DS18B20Readings' from incompatible pointer type [-Wincompatible-pointer-types]
+  200 |    get_DS18B20Readings(&thp[4], DS18B20_tempArr, &DS18B20_T, &internalTemp);
+      |                                 ^~~~~~~~~~~~~~~
+      |                                 |
+      |                                 uint8_t ** {aka unsigned char **}
+../Core/Src/main.c:71:55: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t **' {aka 'unsigned char **'}
+   71 | void get_DS18B20Readings(uint8_t *statusPtr, uint8_t *u8Arr, uint16_t *u16Ptr, float *floatPtr);
+      |                                              ~~~~~~~~~^~~~~
+../Core/Src/main.c:236:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  236 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer);
+      |    ^~~~
+../Core/Src/main.c:121:25: warning: unused variable 'sConfig2' [-Wunused-variable]
+  121 |  ADC_ChannelConfTypeDef sConfig2 = {13};
+      |                         ^~~~~~~~
+../Core/Src/main.c:117:7: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  117 |  char voltBuffer[50];
+      |       ^~~~~~~~~~
+../Core/Src/main.c:109:25: warning: unused variable 'DS18B20_Temp2' [-Wunused-variable]
+  109 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |                         ^~~~~~~~~~~~~
+../Core/Src/main.c:109:10: warning: unused variable 'DS18B20_Temp1' [-Wunused-variable]
+  109 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |          ^~~~~~~~~~~~~
+../Core/Src/main.c: In function 'get_moistureReadings':
+../Core/Src/main.c:661:16: warning: assignment to 'uint16_t *' {aka 'short unsigned int *'} from 'uint32_t' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+  661 |    moisturePtr = HAL_ADC_GetValue(&hadc);
+      |                ^
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50308	    124	   2180	  52612	   cd84	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+14:35:30 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-size   PCBv1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50308	    124	   2180	  52612	   cd84	PCBv1.elf
+Finished building: default.size.stdout
+ 
+14:42:40 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:182:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  182 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:184:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  184 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:207:33: warning: passing argument 2 of 'get_DS18B20Readings' from incompatible pointer type [-Wincompatible-pointer-types]
+  207 |    get_DS18B20Readings(&thp[4], DS18B20_tempArr, &DS18B20_T, &internalTemp);
+      |                                 ^~~~~~~~~~~~~~~
+      |                                 |
+      |                                 uint8_t ** {aka unsigned char **}
+../Core/Src/main.c:71:55: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t **' {aka 'unsigned char **'}
+   71 | void get_DS18B20Readings(uint8_t *statusPtr, uint8_t *u8Arr, uint16_t *u16Ptr, float *floatPtr);
+      |                                              ~~~~~~~~~^~~~~
+../Core/Src/main.c:243:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  243 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer);
+      |    ^~~~
+../Core/Src/main.c:121:25: warning: variable 'sConfig2' set but not used [-Wunused-but-set-variable]
+  121 |  ADC_ChannelConfTypeDef sConfig2 = {13};
+      |                         ^~~~~~~~
+../Core/Src/main.c:117:7: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  117 |  char voltBuffer[50];
+      |       ^~~~~~~~~~
+../Core/Src/main.c:109:25: warning: unused variable 'DS18B20_Temp2' [-Wunused-variable]
+  109 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |                         ^~~~~~~~~~~~~
+../Core/Src/main.c:109:10: warning: unused variable 'DS18B20_Temp1' [-Wunused-variable]
+  109 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |          ^~~~~~~~~~~~~
+../Core/Src/main.c: In function 'get_moistureReadings':
+../Core/Src/main.c:670:16: warning: assignment to 'uint16_t *' {aka 'short unsigned int *'} from 'uint32_t' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+  670 |    moisturePtr = HAL_ADC_GetValue(&hadc);
+      |                ^
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50332	    124	   2180	  52636	   cd9c	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+14:47:02 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:182:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  182 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:184:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  184 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:207:33: warning: passing argument 2 of 'get_DS18B20Readings' from incompatible pointer type [-Wincompatible-pointer-types]
+  207 |    get_DS18B20Readings(&thp[4], DS18B20_tempArr, &DS18B20_T, &internalTemp);
+      |                                 ^~~~~~~~~~~~~~~
+      |                                 |
+      |                                 uint8_t ** {aka unsigned char **}
+../Core/Src/main.c:71:55: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t **' {aka 'unsigned char **'}
+   71 | void get_DS18B20Readings(uint8_t *statusPtr, uint8_t *u8Arr, uint16_t *u16Ptr, float *floatPtr);
+      |                                              ~~~~~~~~~^~~~~
+../Core/Src/main.c:243:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  243 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer);
+      |    ^~~~
+../Core/Src/main.c:117:7: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  117 |  char voltBuffer[50];
+      |       ^~~~~~~~~~
+../Core/Src/main.c:109:25: warning: unused variable 'DS18B20_Temp2' [-Wunused-variable]
+  109 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |                         ^~~~~~~~~~~~~
+../Core/Src/main.c:109:10: warning: unused variable 'DS18B20_Temp1' [-Wunused-variable]
+  109 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |          ^~~~~~~~~~~~~
+../Core/Src/main.c: In function 'get_moistureReadings':
+../Core/Src/main.c:670:16: warning: assignment to 'uint16_t *' {aka 'short unsigned int *'} from 'uint32_t' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+  670 |    moisturePtr = HAL_ADC_GetValue(&hadc);
+      |                ^
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50444	    124	   2180	  52748	   ce0c	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+14:49:02 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:182:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  182 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:184:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  184 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:207:33: warning: passing argument 2 of 'get_DS18B20Readings' from incompatible pointer type [-Wincompatible-pointer-types]
+  207 |    get_DS18B20Readings(&thp[4], DS18B20_tempArr, &DS18B20_T, &internalTemp);
+      |                                 ^~~~~~~~~~~~~~~
+      |                                 |
+      |                                 uint8_t ** {aka unsigned char **}
+../Core/Src/main.c:71:55: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t **' {aka 'unsigned char **'}
+   71 | void get_DS18B20Readings(uint8_t *statusPtr, uint8_t *u8Arr, uint16_t *u16Ptr, float *floatPtr);
+      |                                              ~~~~~~~~~^~~~~
+../Core/Src/main.c:245:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  245 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer);
+      |    ^~~~
+../Core/Src/main.c:117:7: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  117 |  char voltBuffer[50];
+      |       ^~~~~~~~~~
+../Core/Src/main.c:109:25: warning: unused variable 'DS18B20_Temp2' [-Wunused-variable]
+  109 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |                         ^~~~~~~~~~~~~
+../Core/Src/main.c:109:10: warning: unused variable 'DS18B20_Temp1' [-Wunused-variable]
+  109 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |          ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50448	    124	   2180	  52752	   ce10	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+14:59:18 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:176:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  176 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:178:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  178 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:199:33: warning: passing argument 2 of 'get_DS18B20Readings' from incompatible pointer type [-Wincompatible-pointer-types]
+  199 |    get_DS18B20Readings(&thp[4], DS18B20_tempArr, &DS18B20_T, &internalTemp);
+      |                                 ^~~~~~~~~~~~~~~
+      |                                 |
+      |                                 uint8_t ** {aka unsigned char **}
+../Core/Src/main.c:71:55: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t **' {aka 'unsigned char **'}
+   71 | void get_DS18B20Readings(uint8_t *statusPtr, uint8_t *u8Arr, uint16_t *u16Ptr, float *floatPtr);
+      |                                              ~~~~~~~~~^~~~~
+../Core/Src/main.c:220:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  220 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer);
+      |    ^~~~
+../Core/Src/main.c:272:42: error: 'skipp' undeclared (first use in this function)
+  272 |     HAL_UART_Transmit(&huart4, (uint8_t*)skipp, strlen(skipp), HAL_MAX_DELAY);
+      |                                          ^~~~~
+../Core/Src/main.c:272:42: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:279:44: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  279 |     HAL_UART_Transmit(&huart4, buf, strlen(buf), HAL_MAX_DELAY);
+      |                                            ^~~
+      |                                            |
+      |                                            uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+c:\st\stm32cubeide_1.8.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c:282:44: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  282 |     HAL_UART_Transmit(&huart4, buf, strlen(buf), HAL_MAX_DELAY);
+      |                                            ^~~
+      |                                            |
+      |                                            uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+c:\st\stm32cubeide_1.8.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c:117:7: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  117 |  char voltBuffer[50];
+      |       ^~~~~~~~~~
+../Core/Src/main.c:109:25: warning: unused variable 'DS18B20_Temp2' [-Wunused-variable]
+  109 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |                         ^~~~~~~~~~~~~
+../Core/Src/main.c:109:10: warning: unused variable 'DS18B20_Temp1' [-Wunused-variable]
+  109 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |          ^~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:01:04 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:177:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  177 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:179:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  179 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:200:33: warning: passing argument 2 of 'get_DS18B20Readings' from incompatible pointer type [-Wincompatible-pointer-types]
+  200 |    get_DS18B20Readings(&thp[4], DS18B20_tempArr, &DS18B20_T, &internalTemp);
+      |                                 ^~~~~~~~~~~~~~~
+      |                                 |
+      |                                 uint8_t ** {aka unsigned char **}
+../Core/Src/main.c:71:55: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t **' {aka 'unsigned char **'}
+   71 | void get_DS18B20Readings(uint8_t *statusPtr, uint8_t *u8Arr, uint16_t *u16Ptr, float *floatPtr);
+      |                                              ~~~~~~~~~^~~~~
+../Core/Src/main.c:221:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  221 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer);
+      |    ^~~~
+../Core/Src/main.c:280:44: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  280 |     HAL_UART_Transmit(&huart4, buf, strlen(buf), HAL_MAX_DELAY);
+      |                                            ^~~
+      |                                            |
+      |                                            uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+c:\st\stm32cubeide_1.8.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c:283:44: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  283 |     HAL_UART_Transmit(&huart4, buf, strlen(buf), HAL_MAX_DELAY);
+      |                                            ^~~
+      |                                            |
+      |                                            uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+c:\st\stm32cubeide_1.8.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c:118:7: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  118 |  char voltBuffer[50];
+      |       ^~~~~~~~~~
+../Core/Src/main.c:110:25: warning: unused variable 'DS18B20_Temp2' [-Wunused-variable]
+  110 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |                         ^~~~~~~~~~~~~
+../Core/Src/main.c:110:10: warning: unused variable 'DS18B20_Temp1' [-Wunused-variable]
+  110 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |          ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50680	    124	   2180	  52984	   cef8	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+15:01:07 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-size   PCBv1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50680	    124	   2180	  52984	   cef8	PCBv1.elf
+Finished building: default.size.stdout
+ 
+15:03:36 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:177:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  177 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:179:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  179 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:200:33: warning: passing argument 2 of 'get_DS18B20Readings' from incompatible pointer type [-Wincompatible-pointer-types]
+  200 |    get_DS18B20Readings(&thp[4], DS18B20_tempArr, &DS18B20_T, &internalTemp);
+      |                                 ^~~~~~~~~~~~~~~
+      |                                 |
+      |                                 uint8_t ** {aka unsigned char **}
+../Core/Src/main.c:71:55: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t **' {aka 'unsigned char **'}
+   71 | void get_DS18B20Readings(uint8_t *statusPtr, uint8_t *u8Arr, uint16_t *u16Ptr, float *floatPtr);
+      |                                              ~~~~~~~~~^~~~~
+../Core/Src/main.c:221:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  221 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer);
+      |    ^~~~
+../Core/Src/main.c:275:1: error: stray '`' in program
+  275 | `
+      | ^
+../Core/Src/main.c:118:7: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  118 |  char voltBuffer[50];
+      |       ^~~~~~~~~~
+../Core/Src/main.c:110:25: warning: unused variable 'DS18B20_Temp2' [-Wunused-variable]
+  110 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |                         ^~~~~~~~~~~~~
+../Core/Src/main.c:110:10: warning: unused variable 'DS18B20_Temp1' [-Wunused-variable]
+  110 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |          ^~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:04:08 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:177:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  177 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:179:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  179 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:200:33: warning: passing argument 2 of 'get_DS18B20Readings' from incompatible pointer type [-Wincompatible-pointer-types]
+  200 |    get_DS18B20Readings(&thp[4], DS18B20_tempArr, &DS18B20_T, &internalTemp);
+      |                                 ^~~~~~~~~~~~~~~
+      |                                 |
+      |                                 uint8_t ** {aka unsigned char **}
+../Core/Src/main.c:71:55: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t **' {aka 'unsigned char **'}
+   71 | void get_DS18B20Readings(uint8_t *statusPtr, uint8_t *u8Arr, uint16_t *u16Ptr, float *floatPtr);
+      |                                              ~~~~~~~~~^~~~~
+../Core/Src/main.c:221:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  221 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer);
+      |    ^~~~
+../Core/Src/main.c:118:7: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  118 |  char voltBuffer[50];
+      |       ^~~~~~~~~~
+../Core/Src/main.c:110:25: warning: unused variable 'DS18B20_Temp2' [-Wunused-variable]
+  110 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |                         ^~~~~~~~~~~~~
+../Core/Src/main.c:110:10: warning: unused variable 'DS18B20_Temp1' [-Wunused-variable]
+  110 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |          ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50580	    124	   2180	  52884	   ce94	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+15:04:11 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-size   PCBv1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50580	    124	   2180	  52884	   ce94	PCBv1.elf
+Finished building: default.size.stdout
+ 
+15:10:20 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:178:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  178 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:180:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  180 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:203:33: warning: passing argument 2 of 'get_DS18B20Readings' from incompatible pointer type [-Wincompatible-pointer-types]
+  203 |    get_DS18B20Readings(&thp[4], DS18B20_tempArr, &DS18B20_T, &internalTemp);
+      |                                 ^~~~~~~~~~~~~~~
+      |                                 |
+      |                                 uint8_t ** {aka unsigned char **}
+../Core/Src/main.c:72:55: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t **' {aka 'unsigned char **'}
+   72 | void get_DS18B20Readings(uint8_t *statusPtr, uint8_t *u8Arr, uint16_t *u16Ptr, float *floatPtr);
+      |                                              ~~~~~~~~~^~~~~
+../Core/Src/main.c:224:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  224 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer);
+      |    ^~~~
+../Core/Src/main.c:119:7: warning: unused variable 'voltBuffer' [-Wunused-variable]
+  119 |  char voltBuffer[50];
+      |       ^~~~~~~~~~
+../Core/Src/main.c:111:25: warning: unused variable 'DS18B20_Temp2' [-Wunused-variable]
+  111 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |                         ^~~~~~~~~~~~~
+../Core/Src/main.c:111:10: warning: unused variable 'DS18B20_Temp1' [-Wunused-variable]
+  111 |  uint8_t DS18B20_Temp1, DS18B20_Temp2;
+      |          ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50620	    124	   2180	  52924	   cebc	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+15:19:54 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:177:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  177 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:179:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  179 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:215:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  215 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer);
+      |    ^~~~
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  50576	    124	   2180	  52880	   ce90	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+15:39:35 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:175:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  175 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:177:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  177 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:210:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  210 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer);  //float to char array
+      |    ^~~~
+../Core/Src/main.c:100:7: warning: unused variable 'skipp' [-Wunused-variable]
+  100 |  char skipp[] = "@@@";
+      |       ^~~~~
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  52448	    488	   2176	  55112	   d748	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+15:42:17 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:175:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  175 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:177:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  177 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:210:4: warning: implicit declaration of function 'gcvt' [-Wimplicit-function-declaration]
+  210 |    gcvt(BMP_Pressure, 6, BMP180_PressBuffer);  //float to char array
+      |    ^~~~
+../Core/Src/main.c:100:7: warning: unused variable 'skipp' [-Wunused-variable]
+  100 |  char skipp[] = "@@@";
+      |       ^~~~~
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  52456	    488	   2176	  55120	   d750	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+15:46:22 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:175:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  175 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:177:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  177 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:214:12: error: incompatible type for argument 1 of 'sprintf'
+  214 |    sprintf(BMP_Alt, "%.1f", BMP180_AltBuffer);
+      |            ^~~~~~~
+      |            |
+      |            float
+In file included from ../Core/Src/main.c:26:
+c:\st\stm32cubeide_1.8.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\stdio.h:244:14: note: expected 'char * restrict' but argument is of type 'float'
+  244 | int sprintf (char *__restrict, const char *__restrict, ...)
+      |              ^
+../Core/Src/main.c:215:12: error: incompatible type for argument 1 of 'sprintf'
+  215 |    sprintf(BMP_TempC, "%.1f", BMP180_TempBuffer);
+      |            ^~~~~~~~~
+      |            |
+      |            float
+In file included from ../Core/Src/main.c:26:
+c:\st\stm32cubeide_1.8.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\stdio.h:244:14: note: expected 'char * restrict' but argument is of type 'float'
+  244 | int sprintf (char *__restrict, const char *__restrict, ...)
+      |              ^
+../Core/Src/main.c:100:7: warning: unused variable 'skipp' [-Wunused-variable]
+  100 |  char skipp[] = "@@@";
+      |       ^~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:47:17 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:175:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  175 |    HAL_UART_Transmit(&huart1, LongT, 11, 1000);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:177:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  177 |    HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32l0xx_hal_conf.h:280,
+                 from ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h:1488:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:100:7: warning: unused variable 'skipp' [-Wunused-variable]
+  100 |  char skipp[] = "@@@";
+      |       ^~~~~
+arm-none-eabi-gcc -o "PCBv1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\PCBv1\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PCBv1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PCBv1.elf
+ 
+arm-none-eabi-size   PCBv1.elf 
+arm-none-eabi-objdump -h -S  PCBv1.elf  > "PCBv1.list"
+arm-none-eabi-objcopy  -O binary  PCBv1.elf  "PCBv1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  51664	    488	   2176	  54328	   d438	PCBv1.elf
+Finished building: default.size.stdout
+ 
+Finished building: PCBv1.bin
+ 
+Finished building: PCBv1.list
+ 
+15:47:21 **** Incremental Build of configuration Debug for project PCBv1 ****
+make -j8 all 
+arm-none-eabi-size   PCBv1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51664	    488	   2176	  54328	   d438	PCBv1.elf
+Finished building: default.size.stdout
+ 
