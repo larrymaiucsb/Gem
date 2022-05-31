@@ -70,6 +70,7 @@ static void MX_USART4_UART_Init(void);
 void get_BMP180Readings(float *tempPtr, float *pressurePtr, float *altPtr);
 void get_DHT22Readings(float *tempPtr, float *humPtr, uint8_t *u8Arr, uint16_t *u16Arr);
 void get_DS18B20Readings(uint8_t *statusPtr, uint8_t *u8Arr, uint16_t *u16Ptr, float *floatPtr);
+void get_LDRReadings(ADC_ChannelConfTypeDef *ADC_configPtr, float *voltagePtr, uint16_t *lightPtr);
 void get_moistureReadings(ADC_ChannelConfTypeDef *ADC_config, uint16_t *moisturePtr);
 /* USER CODE END PFP */
 
@@ -85,6 +86,13 @@ void get_moistureReadings(ADC_ChannelConfTypeDef *ADC_config, uint16_t *moisture
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+	//
+	//
+	//
+	// ***change ID in while loop for each node
+	//
+	//
+	//
 	//----------------------------------------------------variables
 	//-------------------------------------GPS
 	uint8_t buf[71] = "";
@@ -97,7 +105,6 @@ int main(void)
 	char BMP180_PressBuffer[50];
 	char BMP180_AltBuffer[50];
 	char BMP180_TempBuffer[50];
-	char skipp[] = "@@@";
 	//-------------------------------------DHT22
 	float DHT_TempC = 0;
 	float DHT_Hum = 0;
@@ -122,6 +129,8 @@ int main(void)
 	char moistbuffer[50];
 	ADC_ChannelConfTypeDef sConfig2 = {13};
 	sConfig2.Channel = ADC_CHANNEL_13;
+	//-------------------------------------message frame
+	//char messageFrame[300]
 
 
   /* USER CODE END 1 */
@@ -186,15 +195,7 @@ int main(void)
 	  //------------------------------------------------------------DS18B20
 	  get_DS18B20Readings(&thp[4], DS18B20_tempArr, &DS18B20_T, &internalTemp);
 	  //------------------------------------------------------------LDR
-	 // sConfig.SamplingTime = ADC_SAMPLETIME_28CYCLES; //l0 hal has no .samplingtime attribute?
-	  if(HAL_ADC_ConfigChannel(&hadc, &sConfig) != HAL_OK) {
-		  Error_Handler();
-	  }
-	  HAL_ADC_Start(&hadc); //Start Light ADC
-	  HAL_ADC_PollForConversion(&hadc, HAL_MAX_DELAY);
-	  light = HAL_ADC_GetValue(&hadc);
-	  voltage = 3.3 * light;
-	  voltage = voltage / 4095;
+	  get_LDRReadings(&sConfig, &voltage, &light);
 	  //-----------------------------------------------------------moisture
 	  get_moistureReadings(&sConfig2, &moisture);
 
@@ -206,61 +207,47 @@ int main(void)
 	  sprintf(DHT22_HumBuffer, "%.1f", DHT_Hum);
 	  sprintf(DS18B20_TempBuffer, "%.1f", internalTemp);
 	  sprintf(moistbuffer, "%hu\r\n", moisture);
-
 	  //----------------------------------------------------------------------message frame format
-	  //@72T 47H 7400S 19A 10150P 554M # (NO SPACE)
-	  //open: @
+	  //@ N1 72T 47H 7400S 19A 10150P 554M # (NO SPACE)
+	  //open -> @
+	  //ID -> N1, N2, N3,...
 	  //DHT22 - temp -> T
 	  //DHT22 - hum -> H
 	  //DS18B20 -> S
 	  //BMP180 - alt -> A
 	  //BMP180 - pres -> P
 	  //Moisture -> M
-	  //close: #
-
-	  //----------------------------------------------------------------------message frame - head
+	  //close -> #
+	  //-----------------------------------------------------------------------------message frame - head
 	  HAL_UART_Transmit(&huart4, (uint8_t*)"@", strlen("@"), HAL_MAX_DELAY);
-
-	  //-------------------------------------------------------------------------------DHT22
-	  //--------------------------------------------------temp
-	  //HAL_UART_Transmit(&huart4, (uint8_t*)DHT22_TempString, strlen(DHT22_TempString), HAL_MAX_DELAY);
+	  //-------------------------------------------------------------------------------------hardcoded ID
+	  HAL_UART_Transmit(&huart4, (uint8_t*)"N1", strlen("@"), HAL_MAX_DELAY);
+	  //--------------------------------------------------------------------------------------------DHT22
+	  //------------------------------------------------------------------------------temp
 	  HAL_UART_Transmit(&huart4, (uint8_t*)DHT22_TempBuffer, strlen(DHT22_TempBuffer), HAL_MAX_DELAY);
 	  HAL_UART_Transmit(&huart4, (uint8_t*)"T", strlen("T"), HAL_MAX_DELAY);
-
-	  //-------------------------------------------------humidity
-	  //HAL_UART_Transmit(&huart4, (uint8_t*)DHT22_HumString, strlen(DHT22_HumString), HAL_MAX_DELAY);
+	  //-----------------------------------------------------------------------------humidity
 	  HAL_UART_Transmit(&huart4, (uint8_t*)DHT22_HumBuffer, strlen(DHT22_HumBuffer), HAL_MAX_DELAY);
 	  HAL_UART_Transmit(&huart4, (uint8_t*)"H", strlen("H"), HAL_MAX_DELAY);
-
-	  //--------------------------------------------------------------------------------DS18B20
-	  //HAL_UART_Transmit(&huart4, (uint8_t*)DS18B20_TempString, strlen(DS18B20_TempString), HAL_MAX_DELAY);
+	  //------------------------------------------------------------------------------------------DS18B20
 	  HAL_UART_Transmit(&huart4, (uint8_t*)DS18B20_TempBuffer, strlen(DHT22_TempBuffer), HAL_MAX_DELAY);
 	  HAL_UART_Transmit(&huart4, (uint8_t*)"S", strlen("S"), HAL_MAX_DELAY);
-
-	  //----------------------------------------------------------------------------------BMP180
+	  //------------------------------------------------------------------------------------------BMP180
 	  //-----------------------------------------altitude
 	  HAL_UART_Transmit(&huart4, (uint8_t*)BMP180_AltBuffer, strlen(BMP180_AltBuffer), HAL_MAX_DELAY);
 	  HAL_UART_Transmit(&huart4, (uint8_t*)"A", strlen("A"), HAL_MAX_DELAY);
 	  //-----------------------------------------pressure
 	  HAL_UART_Transmit(&huart4, (uint8_t*)BMP180_PressBuffer, strlen(BMP180_PressBuffer), HAL_MAX_DELAY);
 	  HAL_UART_Transmit(&huart4, (uint8_t*)"P", strlen("P"), HAL_MAX_DELAY);
-
-/*	  HAL_UART_Transmit(&huart4, buf, strlen(buf), HAL_MAX_DELAY);
-	  //-------------@@@
-	  HAL_UART_Transmit(&huart4, (uint8_t*)skipp, strlen(skipp), HAL_MAX_DELAY);
-
-	  HAL_UART_Transmit(&huart4, buf, strlen(buf), HAL_MAX_DELAY);
-	  //-------------@@@
-	  HAL_UART_Transmit(&huart4, (uint8_t*)skipp, strlen(skipp), HAL_MAX_DELAY);*/
-
-	  //------------------------------------------------------------------------------------Moisture
+	  //------------------------------------------------------------------------------------------moisture
 	  HAL_UART_Transmit(&huart4, (uint8_t*)moistbuffer, strlen(moistbuffer), HAL_MAX_DELAY);
 	  HAL_UART_Transmit(&huart4, (uint8_t*)"M", strlen("M"), HAL_MAX_DELAY);
-
-	  //----------------------------------------------------------------------message frame - tail
+	  //-------------------------------------------------------------------------------message frame - tail
 	  HAL_UART_Transmit(&huart4, (uint8_t*)"#", strlen("#"), HAL_MAX_DELAY);
 
-	  //HAL_Delay(100);
+
+
+	  HAL_Delay(500);
   }
 }
 
@@ -563,59 +550,68 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 void get_BMP180Readings(float *tempPtr, float *pressurePtr, float *altPtr){
-	  *tempPtr = getTemp(); 						//Get Temperature
-	  //BMP_TempF = ((BMP_TempC * 9) / 5) + 32; 	//Convert to F
-	  *pressurePtr = getPressure(0); 				//Get Pressure
-	  *altPtr = getAlt(0); 							//Get Altitude
+	*tempPtr = getTemp(); 						//Get Temperature
+	//BMP_TempF = ((BMP_TempC * 9) / 5) + 32; 	//Convert to F
+	*pressurePtr = getPressure(0); 				//Get Pressure
+	*altPtr = getAlt(0); 							//Get Altitude
 }
 void get_DHT22Readings(float *tempPtr, float *humPtr, uint8_t *u8Arr, uint16_t *u16Arr){
-	  sensorInit();
-	  u8Arr[4] = sensorVerify();
-	  if(u8Arr[4]) {
-	  	  u8Arr[2] = sensorRead(); 						//Read Lower 8 Humidity
-	  	  u8Arr[3] = sensorRead(); 						//Read Upper 8 Humidity
-	  	  u8Arr[0] = sensorRead(); 						//Read Lower 8 Temperature
-	  	  u8Arr[1] = sensorRead(); 						//Read Upper 8 Temperature
-	  	  u16Arr[2] = sensorRead(); 					//Read Checksum
+	sensorInit();
+	u8Arr[4] = sensorVerify();
+	if(u8Arr[4]) {
+		u8Arr[2] = sensorRead(); 						//Read Lower 8 Humidity
+	  	u8Arr[3] = sensorRead(); 						//Read Upper 8 Humidity
+	  	u8Arr[0] = sensorRead(); 						//Read Lower 8 Temperature
+	  	u8Arr[1] = sensorRead(); 						//Read Upper 8 Temperature
+	  	u16Arr[2] = sensorRead(); 					//Read Checksum
 
-	  	  u16Arr[0] = ((u8Arr[0] << 8) | u8Arr[1]); 	//Assemble Temperature
-	  	  u16Arr[1] = ((u8Arr[2] << 8 | u8Arr[3])); 	//Assemble Humidity
+	  	u16Arr[0] = ((u8Arr[0] << 8) | u8Arr[1]); 	//Assemble Temperature
+	  	u16Arr[1] = ((u8Arr[2] << 8 | u8Arr[3])); 	//Assemble Humidity
 
-	  	  *tempPtr = (float) (u16Arr[0]/10.0);			//Get Temperature
-	   	  *tempPtr = ((*tempPtr * 9) / 5) + 32; 		//Convert from Celsius
-	   	  *humPtr = (float) (u16Arr[1]/10.0); 			//Get Humidity
-	   	  }
+	  	*tempPtr = (float) (u16Arr[0]/10.0);			//Get Temperature
+	   	*tempPtr = ((*tempPtr * 9) / 5) + 32; 		//Convert from Celsius
+	   	*humPtr = (float) (u16Arr[1]/10.0); 			//Get Humidity
+	   	}
 }
 void get_DS18B20Readings(uint8_t *statusPtr, uint8_t *u8Arr, uint16_t *u16Ptr, float *floatPtr){
-	  *statusPtr = dsInit(); 							//Initialize the DS18B20
-	  if(*statusPtr) {
-		  HAL_Delay(1);
-		  dsWrite(0xCC); 								//Skip ROM Command
-		  dsWrite(0x44);								//Convert Temperature
-	  }
-	  *statusPtr = dsInit(); 							//Initialize DS18B20 Again
-	  if(*statusPtr) {
-		  HAL_Delay(1);
-		  dsWrite(0xCC); 								//Skip ROM Command
-		  dsWrite(0xBE); 								//Read Scratchpad
-		  u8Arr[0] = dsRead(); 							//Read Lower 8
-		  u8Arr[1] = dsRead(); 							//Read Upper 8
+	*statusPtr = dsInit(); 							//Initialize the DS18B20
+	if(*statusPtr) {
+		HAL_Delay(1);
+		dsWrite(0xCC); 								//Skip ROM Command
+		dsWrite(0x44);								//Convert Temperature
+		}
+	*statusPtr = dsInit(); 							//Initialize DS18B20 Again
+	if(*statusPtr) {
+		HAL_Delay(1);
+		dsWrite(0xCC); 								//Skip ROM Command
+		dsWrite(0xBE); 								//Read Scratchpad
+		u8Arr[0] = dsRead(); 							//Read Lower 8
+		u8Arr[1] = dsRead(); 							//Read Upper 8
 
-		  *u16Ptr = (u8Arr[1] << 8) | u8Arr[0]; 		//Combine
-		  *floatPtr = (float) *u16Ptr/16; 				//Get Temperature
-		  *floatPtr = ((*floatPtr * 9) / 5) + 32; 		//Convert to F
-	  }
+		*u16Ptr = (u8Arr[1] << 8) | u8Arr[0]; 		//Combine
+		*floatPtr = (float) *u16Ptr/16; 				//Get Temperature
+		*floatPtr = ((*floatPtr * 9) / 5) + 32; 		//Convert to F
+		}
+}
+void get_LDRReadings(ADC_ChannelConfTypeDef *ADC_configPtr, float *voltagePtr, uint16_t *lightPtr){
+	//sConfig.SamplingTime = ADC_SAMPLETIME_28CYCLES; //l0 hal has no .samplingtime attribute?
+	if(HAL_ADC_ConfigChannel(&hadc, ADC_configPtr) != HAL_OK) {
+		Error_Handler();
+	}
+	HAL_ADC_Start(&hadc); 									//Start Light ADC
+	HAL_ADC_PollForConversion(&hadc, HAL_MAX_DELAY);
+	*lightPtr = HAL_ADC_GetValue(&hadc);
+	*voltagePtr = 3.3 * (*lightPtr);
+	*voltagePtr = *voltagePtr / 4095;
 }
 void get_moistureReadings(ADC_ChannelConfTypeDef *ADC_configPtr, uint16_t *moisturePtr){
-
-	  //ADC_configPtr->Channel = ADC_CHANNEL_13;
-	  if(HAL_ADC_ConfigChannel(&hadc, ADC_configPtr) != HAL_OK) {
-		  Error_Handler();
-	  }
-	  HAL_ADC_Start(&hadc); 									//Start Soil ADC
-
-	  HAL_ADC_PollForConversion(&hadc, HAL_MAX_DELAY);
-	  *moisturePtr = HAL_ADC_GetValue(&hadc);
+	//ADC_configPtr->Channel = ADC_CHANNEL_13;
+	if(HAL_ADC_ConfigChannel(&hadc, ADC_configPtr) != HAL_OK) {
+		Error_Handler();
+	}
+	HAL_ADC_Start(&hadc); 									//Start Soil ADC
+	HAL_ADC_PollForConversion(&hadc, HAL_MAX_DELAY);
+	*moisturePtr = HAL_ADC_GetValue(&hadc);
 }
 /* USER CODE END 4 */
 
