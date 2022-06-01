@@ -221,7 +221,7 @@ int main(void)
 	  //-----------------------------------------------------------------------------message frame - head
 	  HAL_UART_Transmit(&huart4, (uint8_t*)"@", strlen("@"), HAL_MAX_DELAY);
 	  //-------------------------------------------------------------------------------------hardcoded ID
-	  HAL_UART_Transmit(&huart4, (uint8_t*)"N1", strlen("@"), HAL_MAX_DELAY);
+	  HAL_UART_Transmit(&huart4, (uint8_t*)"N3", strlen("N3"), HAL_MAX_DELAY);
 	  //--------------------------------------------------------------------------------------------DHT22
 	  //------------------------------------------------------------------------------temp
 	  HAL_UART_Transmit(&huart4, (uint8_t*)DHT22_TempBuffer, strlen(DHT22_TempBuffer), HAL_MAX_DELAY);
@@ -237,11 +237,11 @@ int main(void)
 	  HAL_UART_Transmit(&huart4, (uint8_t*)BMP180_AltBuffer, strlen(BMP180_AltBuffer), HAL_MAX_DELAY);
 	  HAL_UART_Transmit(&huart4, (uint8_t*)"A", strlen("A"), HAL_MAX_DELAY);
 	  //-----------------------------------------pressure
-	  HAL_UART_Transmit(&huart4, (uint8_t*)BMP180_PressBuffer, strlen(BMP180_PressBuffer), HAL_MAX_DELAY);
+/*	  HAL_UART_Transmit(&huart4, (uint8_t*)BMP180_PressBuffer, strlen(BMP180_PressBuffer), HAL_MAX_DELAY);
 	  HAL_UART_Transmit(&huart4, (uint8_t*)"P", strlen("P"), HAL_MAX_DELAY);
 	  //------------------------------------------------------------------------------------------moisture
 	  HAL_UART_Transmit(&huart4, (uint8_t*)moistbuffer, strlen(moistbuffer), HAL_MAX_DELAY);
-	  HAL_UART_Transmit(&huart4, (uint8_t*)"M", strlen("M"), HAL_MAX_DELAY);
+	  HAL_UART_Transmit(&huart4, (uint8_t*)"M", strlen("M"), HAL_MAX_DELAY);*/
 	  //-------------------------------------------------------------------------------message frame - tail
 	  HAL_UART_Transmit(&huart4, (uint8_t*)"#", strlen("#"), HAL_MAX_DELAY);
 

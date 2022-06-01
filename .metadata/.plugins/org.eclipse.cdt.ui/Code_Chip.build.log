@@ -1,5 +1,5 @@
-18:03:17 **** Incremental Build of configuration Debug for project Code_Chip ****
-make -j16 all 
+15:52:23 **** Incremental Build of configuration Debug for project Code_Chip ****
+make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L072xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
 ../Core/Src/main.c:187:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
@@ -31,12 +31,15 @@ Finished building target: Code_Chip.elf
  
 arm-none-eabi-size   Code_Chip.elf 
 arm-none-eabi-objdump -h -S  Code_Chip.elf  > "Code_Chip.list"
+arm-none-eabi-objcopy  -O binary  Code_Chip.elf  "Code_Chip.bin"
    text	   data	    bss	    dec	    hex	filename
-  51408	    484	   2164	  54056	   d328	Code_Chip.elf
+  51632	    488	   2176	  54296	   d418	Code_Chip.elf
 Finished building: default.size.stdout
+ 
+Finished building: Code_Chip.bin
  
 Finished building: Code_Chip.list
  
 
-18:03:18 Build Finished. 0 errors, 2 warnings. (took 792ms)
+15:52:24 Build Finished. 0 errors, 2 warnings. (took 935ms)
 
