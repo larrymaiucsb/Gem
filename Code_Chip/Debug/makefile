@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (9-2020-q2-update)
+# Toolchain: GNU Tools for STM32 (10.3-2021.10)
 ################################################################################
 
 -include ../makefile.init
@@ -43,14 +43,14 @@ BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ART
 EXECUTABLES += \
 Code_Chip.elf \
 
+MAP_FILES += \
+Code_Chip.map \
+
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
 Code_Chip.list \
-
-OBJCOPY_BIN += \
-Code_Chip.bin \
 
 
 # All Target
@@ -60,7 +60,7 @@ all: main-build
 main-build: Code_Chip.elf secondary-outputs
 
 # Tool invocations
-Code_Chip.elf: $(OBJS) $(USER_OBJS) C:\Users\Ming\Documents\GitHub\Gem\Code_Chip\STM32L072RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+Code_Chip.elf Code_Chip.map: $(OBJS) $(USER_OBJS) C:\Users\Ming\Documents\GitHub\Gem\Code_Chip\STM32L072RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	arm-none-eabi-gcc -o "Code_Chip.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\Ming\Documents\GitHub\Gem\Code_Chip\STM32L072RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Code_Chip.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
@@ -75,17 +75,12 @@ Code_Chip.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-Code_Chip.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "Code_Chip.bin"
-	@echo 'Finished building: $@'
-	@echo ' '
-
 # Other Targets
 clean:
-	-$(RM) Code_Chip.bin Code_Chip.elf Code_Chip.list default.size.stdout
+	-$(RM) Code_Chip.elf Code_Chip.list Code_Chip.map default.size.stdout
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_BIN)
+secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
 
 fail-specified-linker-script-missing:
 	@echo 'Error: Cannot find the specified linker script. Check the linker settings in the build configuration.'

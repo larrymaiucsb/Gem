@@ -52,7 +52,7 @@ I2C_HandleTypeDef hi2c1;
 TIM_HandleTypeDef htim2;
 
 UART_HandleTypeDef huart1;
-UART_HandleTypeDef huart4;
+UART_HandleTypeDef huart5;
 
 /* USER CODE BEGIN PV */
 
@@ -65,7 +65,7 @@ static void MX_GPIO_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_ADC_Init(void);
 static void MX_USART1_UART_Init(void);
-static void MX_USART4_UART_Init(void);
+static void MX_USART5_UART_Init(void);
 /* USER CODE BEGIN PFP */
 void get_BMP180Readings(float *tempPtr, float *pressurePtr, float *altPtr);
 void get_DHT22Readings(float *tempPtr, float *humPtr, uint8_t *u8Arr, uint16_t *u16Arr);
@@ -86,6 +86,8 @@ void get_moistureReadings(ADC_ChannelConfTypeDef *ADC_config, uint16_t *moisture
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+
+	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
 	//
 	//
 	//
@@ -95,11 +97,13 @@ int main(void)
 	//
 	//----------------------------------------------------variables
 	//-------------------------------------GPS
+/*
 	uint8_t buf[71] = "";
 	uint8_t msg0[32] = "\n\rFUll NMEA String: ";
 	uint8_t msg1[32] = "\n\rLongitude: ";
 	uint8_t msg2[32] = "\n\rLatitude: ";
 	uint8_t command[45] = "PMTK314,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"; //For GGA and RMC information only
+*/
 	//-------------------------------------BMP180
 	float BMP_TempC, BMP_Alt, BMP_Pressure;
 	char BMP180_PressBuffer[50];
@@ -113,22 +117,24 @@ int main(void)
 	char DHT22_TempBuffer[50];
 	char DHT22_HumBuffer[50];
 	//-------------------------------------DS18B20
-	uint8_t DS18B20_tempArr[] = {0, 0};
+/*	uint8_t DS18B20_tempArr[] = {0, 0};
 	uint16_t DS18B20_T;
 	float internalTemp = 0;
-	char DS18B20_TempBuffer[50];
+	char DS18B20_TempBuffer[50];*/
 	//-------------------------------------LDR
-	uint16_t light = 0;
+/*	uint16_t light = 0;
 	float voltage;
 	//char voltBuffer[50];
 	ADC_ChannelConfTypeDef sConfig = {0};
 	sConfig.Channel = ADC_CHANNEL_0;
-	sConfig.Rank = 1;
+	sConfig.Rank = 1;*/
 	//-------------------------------------moisture
 	uint16_t  moisture = 0;
 	char moistbuffer[50];
 	ADC_ChannelConfTypeDef sConfig2 = {13};
 	sConfig2.Channel = ADC_CHANNEL_13;
+	//-------------------------------------------------------------
+	sConfig2.Rank = 1;
 	//-------------------------------------message frame
 	//char messageFrame[300]
 
@@ -138,31 +144,32 @@ int main(void)
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-	HAL_Init();
-
+  HAL_Init();
 
   /* USER CODE BEGIN Init */
 
   /* USER CODE END Init */
 
   /* Configure the system clock */
-	SystemClock_Config();
+  SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
 
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
-	MX_TIM2_Init();
-	MX_GPIO_Init();
-	MX_I2C1_Init();
-	MX_ADC_Init();
-	MX_USART1_UART_Init();
-	MX_USART4_UART_Init();
+  MX_TIM2_Init();
+  MX_GPIO_Init();
+  MX_I2C1_Init();
+  MX_ADC_Init();
+  MX_USART1_UART_Init();
+  MX_USART5_UART_Init();
   /* USER CODE BEGIN 2 */
 	HAL_TIM_Base_Start(&htim2);
 	dataCalibration();
-  	HAL_UART_Transmit(&huart1, command, 45, 4000);
+  	//HAL_UART_Transmit(&huart5, command, 45, 4000);
+
+  	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -173,31 +180,39 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 	  //---------------------------------------GPS
+/*
 	  strcpy((char*)buf, "");
-	  HAL_UART_Receive(&huart1, buf, 71, 4000);
-	  HAL_UART_Transmit(&huart1, msg0, 32, 1000);
-	  HAL_UART_Transmit(&huart1, buf, 71, 4000);
+	  HAL_UART_Receive(&huart5, buf, 71, 4000);
+	  HAL_UART_Transmit(&huart5, msg0, 32, 1000);
+	  HAL_UART_Transmit(&huart5, buf, 71, 4000);
 
 	  char* LongT = (char*) buf;
 	  LongT = LongT + 18;
 	  char* LatT = (char*) buf;
 	  LatT = LatT + 30;
 
-	  HAL_UART_Transmit(&huart1, msg1, 32, 1000);
-	  HAL_UART_Transmit(&huart1, LongT, 11, 1000);
-	  HAL_UART_Transmit(&huart1, msg2, 32, 1000);
-	  HAL_UART_Transmit(&huart1, LatT, 12, 1000);
+	  HAL_UART_Transmit(&huart5, msg1, 32, 1000);
+	  HAL_UART_Transmit(&huart5, LongT, 11, 1000);
+	  HAL_UART_Transmit(&huart5, msg2, 32, 1000);
+	  HAL_UART_Transmit(&huart5, LatT, 12, 1000);
+*/
 
 	  //------------------------------------------------------------BMP180
 	  get_BMP180Readings(&BMP_TempC, &BMP_Pressure, &BMP_Alt);
+	  //-------------REMOVING THIS LINE TRIGGERS BMP-DHT CONFLICT
+	  HAL_Delay(1000);
+	  // HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+	  //-----------------------------------------//
 	  //------------------------------------------------------------DHT22
 	  get_DHT22Readings(&DHT_TempC, &DHT_Hum, thp, temphumsum);
 	  //------------------------------------------------------------DS18B20
-	  get_DS18B20Readings(&thp[4], DS18B20_tempArr, &DS18B20_T, &internalTemp);
+//	  get_DS18B20Readings(&thp[4], DS18B20_tempArr, &DS18B20_T, &internalTemp);
 	  //------------------------------------------------------------LDR
-	  get_LDRReadings(&sConfig, &voltage, &light);
+//	  get_LDRReadings(&sConfig, &voltage, &light);
 	  //-----------------------------------------------------------moisture
 	  get_moistureReadings(&sConfig2, &moisture);
+
+
 
 	  //------------------------------------------------------------------float to string
 	  sprintf(BMP180_PressBuffer, "%.1f", BMP_Pressure);
@@ -205,8 +220,8 @@ int main(void)
 	  sprintf(BMP180_TempBuffer, "%.1f", BMP_TempC);
 	  sprintf(DHT22_TempBuffer, "%.1f", DHT_TempC);
 	  sprintf(DHT22_HumBuffer, "%.1f", DHT_Hum);
-	  sprintf(DS18B20_TempBuffer, "%.1f", internalTemp);
-	  sprintf(moistbuffer, "%hu\r\n", moisture);
+//	  sprintf(DS18B20_TempBuffer, "%.1f", internalTemp);
+	  sprintf(moistbuffer, "%d", moisture);
 	  //----------------------------------------------------------------------message frame format
 	  //@ N1 72T 47H 7400S 19A 10150P 554M # (NO SPACE)
 	  //open -> @
@@ -219,36 +234,37 @@ int main(void)
 	  //Moisture -> M
 	  //close -> #
 	  //-----------------------------------------------------------------------------message frame - head
-	  HAL_UART_Transmit(&huart4, (uint8_t*)"@", strlen("@"), HAL_MAX_DELAY);
+	  HAL_UART_Transmit(&huart5, (uint8_t*)"@", strlen("@"), HAL_MAX_DELAY);
 	  //-------------------------------------------------------------------------------------hardcoded ID
-	  HAL_UART_Transmit(&huart4, (uint8_t*)"N3", strlen("N3"), HAL_MAX_DELAY);
+	  HAL_UART_Transmit(&huart5, (uint8_t*)"N3", strlen("N3"), HAL_MAX_DELAY);
 	  //--------------------------------------------------------------------------------------------DHT22
 	  //------------------------------------------------------------------------------temp
-	  HAL_UART_Transmit(&huart4, (uint8_t*)DHT22_TempBuffer, strlen(DHT22_TempBuffer), HAL_MAX_DELAY);
-	  HAL_UART_Transmit(&huart4, (uint8_t*)"T", strlen("T"), HAL_MAX_DELAY);
+	  HAL_UART_Transmit(&huart5, (uint8_t*)DHT22_TempBuffer, strlen(DHT22_TempBuffer), HAL_MAX_DELAY);
+	  HAL_UART_Transmit(&huart5, (uint8_t*)"T", strlen("T"), HAL_MAX_DELAY);
 	  //-----------------------------------------------------------------------------humidity
-	  HAL_UART_Transmit(&huart4, (uint8_t*)DHT22_HumBuffer, strlen(DHT22_HumBuffer), HAL_MAX_DELAY);
-	  HAL_UART_Transmit(&huart4, (uint8_t*)"H", strlen("H"), HAL_MAX_DELAY);
+	  HAL_UART_Transmit(&huart5, (uint8_t*)DHT22_HumBuffer, strlen(DHT22_HumBuffer), HAL_MAX_DELAY);
+	  HAL_UART_Transmit(&huart5, (uint8_t*)"H", strlen("H"), HAL_MAX_DELAY);
 	  //------------------------------------------------------------------------------------------DS18B20
-	  HAL_UART_Transmit(&huart4, (uint8_t*)DS18B20_TempBuffer, strlen(DHT22_TempBuffer), HAL_MAX_DELAY);
-	  HAL_UART_Transmit(&huart4, (uint8_t*)"S", strlen("S"), HAL_MAX_DELAY);
+//	  HAL_UART_Transmit(&huart5, (uint8_t*)DS18B20_TempBuffer, strlen(DHT22_TempBuffer), HAL_MAX_DELAY);
+	  HAL_UART_Transmit(&huart5, (uint8_t*)"S", strlen("S"), HAL_MAX_DELAY);
 	  //------------------------------------------------------------------------------------------BMP180
 	  //-----------------------------------------altitude
-	  HAL_UART_Transmit(&huart4, (uint8_t*)BMP180_AltBuffer, strlen(BMP180_AltBuffer), HAL_MAX_DELAY);
-	  HAL_UART_Transmit(&huart4, (uint8_t*)"A", strlen("A"), HAL_MAX_DELAY);
+	  HAL_UART_Transmit(&huart5, (uint8_t*)BMP180_AltBuffer, strlen(BMP180_AltBuffer), HAL_MAX_DELAY);
+	  HAL_UART_Transmit(&huart5, (uint8_t*)"A", strlen("A"), HAL_MAX_DELAY);
 	  //-----------------------------------------pressure
-/*	  HAL_UART_Transmit(&huart4, (uint8_t*)BMP180_PressBuffer, strlen(BMP180_PressBuffer), HAL_MAX_DELAY);
-	  HAL_UART_Transmit(&huart4, (uint8_t*)"P", strlen("P"), HAL_MAX_DELAY);
+	  HAL_UART_Transmit(&huart5, (uint8_t*)BMP180_PressBuffer, strlen(BMP180_PressBuffer), HAL_MAX_DELAY);
+	  HAL_UART_Transmit(&huart5, (uint8_t*)"P", strlen("P"), HAL_MAX_DELAY);
 	  //------------------------------------------------------------------------------------------moisture
-	  HAL_UART_Transmit(&huart4, (uint8_t*)moistbuffer, strlen(moistbuffer), HAL_MAX_DELAY);
-	  HAL_UART_Transmit(&huart4, (uint8_t*)"M", strlen("M"), HAL_MAX_DELAY);*/
+	  HAL_UART_Transmit(&huart5, (uint8_t*)moistbuffer, strlen(moistbuffer), HAL_MAX_DELAY);
+	  HAL_UART_Transmit(&huart5, (uint8_t*)"M", strlen("M"), HAL_MAX_DELAY);
 	  //-------------------------------------------------------------------------------message frame - tail
-	  HAL_UART_Transmit(&huart4, (uint8_t*)"#", strlen("#"), HAL_MAX_DELAY);
+	  HAL_UART_Transmit(&huart5, (uint8_t*)"#", strlen("#"), HAL_MAX_DELAY);
 
 
 
-	  HAL_Delay(500);
+	  //HAL_Delay(1000);
   }
+  /* USER CODE END 3 */
 }
 
 /**
@@ -426,9 +442,9 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 24;
+  htim2.Init.Prescaler = 31;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 65535;
+  htim2.Init.Period = 65534;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
@@ -468,7 +484,7 @@ static void MX_USART1_UART_Init(void)
 
   /* USER CODE END USART1_Init 1 */
   huart1.Instance = USART1;
-  huart1.Init.BaudRate = 9600;
+  huart1.Init.BaudRate = 115200;
   huart1.Init.WordLength = UART_WORDLENGTH_8B;
   huart1.Init.StopBits = UART_STOPBITS_1;
   huart1.Init.Parity = UART_PARITY_NONE;
@@ -488,37 +504,37 @@ static void MX_USART1_UART_Init(void)
 }
 
 /**
-  * @brief USART4 Initialization Function
+  * @brief USART5 Initialization Function
   * @param None
   * @retval None
   */
-static void MX_USART4_UART_Init(void)
+static void MX_USART5_UART_Init(void)
 {
 
-  /* USER CODE BEGIN USART4_Init 0 */
+  /* USER CODE BEGIN USART5_Init 0 */
 
-  /* USER CODE END USART4_Init 0 */
+  /* USER CODE END USART5_Init 0 */
 
-  /* USER CODE BEGIN USART4_Init 1 */
+  /* USER CODE BEGIN USART5_Init 1 */
 
-  /* USER CODE END USART4_Init 1 */
-  huart4.Instance = USART4;
-  huart4.Init.BaudRate = 9600;
-  huart4.Init.WordLength = UART_WORDLENGTH_8B;
-  huart4.Init.StopBits = UART_STOPBITS_1;
-  huart4.Init.Parity = UART_PARITY_NONE;
-  huart4.Init.Mode = UART_MODE_TX_RX;
-  huart4.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-  huart4.Init.OverSampling = UART_OVERSAMPLING_16;
-  huart4.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
-  huart4.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
-  if (HAL_UART_Init(&huart4) != HAL_OK)
+  /* USER CODE END USART5_Init 1 */
+  huart5.Instance = USART5;
+  huart5.Init.BaudRate = 115200;
+  huart5.Init.WordLength = UART_WORDLENGTH_8B;
+  huart5.Init.StopBits = UART_STOPBITS_1;
+  huart5.Init.Parity = UART_PARITY_NONE;
+  huart5.Init.Mode = UART_MODE_TX_RX;
+  huart5.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart5.Init.OverSampling = UART_OVERSAMPLING_16;
+  huart5.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+  huart5.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+  if (HAL_UART_Init(&huart5) != HAL_OK)
   {
     Error_Handler();
   }
-  /* USER CODE BEGIN USART4_Init 2 */
+  /* USER CODE BEGIN USART5_Init 2 */
 
-  /* USER CODE END USART4_Init 2 */
+  /* USER CODE END USART5_Init 2 */
 
 }
 
@@ -534,16 +550,35 @@ static void MX_GPIO_Init(void)
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_1|GPIO_PIN_2, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : PC1 PC2 */
   GPIO_InitStruct.Pin = GPIO_PIN_1|GPIO_PIN_2;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PA5 */
+  GPIO_InitStruct.Pin = GPIO_PIN_5;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : PC10 PC11 */
+  GPIO_InitStruct.Pin = GPIO_PIN_10|GPIO_PIN_11;
+  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+  GPIO_InitStruct.Alternate = GPIO_AF6_USART4;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
 }
